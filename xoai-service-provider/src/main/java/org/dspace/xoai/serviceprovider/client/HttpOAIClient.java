@@ -44,7 +44,7 @@ public class HttpOAIClient implements OAIClient {
 	private int timeout = 60000;
 	private String userAgent;
 	private List<String> baseUrlsHttpsExclusion;
-	
+
 	public HttpOAIClient(String baseUrl) {
 		this.baseUrl = baseUrl;
 		httpclient = new DefaultHttpClient(createHttpParams());
@@ -52,9 +52,9 @@ public class HttpOAIClient implements OAIClient {
 
 
 	/**
-	 * Creates a HttpOAIClient 
-	 * 
-	 * @param baseUrl - the base URL for the OAI repository 
+	 * Creates a HttpOAIClient
+	 *
+	 * @param baseUrl - the base URL for the OAI repository
 	 * @param baseUrlsHttpsExclusion - if provided, the base URLs for the OAI repositories will ignore problems related with HTTPS certificate verification
 	 * @throws HttpException
 	 */
@@ -64,11 +64,11 @@ public class HttpOAIClient implements OAIClient {
 		initHttpClient();
 	}
 
-	
+
 	/**
-	 * Creates a HttpOAIClient 
-	 * 
-	 * @param baseUrl - the base URL for the OAI repository 
+	 * Creates a HttpOAIClient
+	 *
+	 * @param baseUrl - the base URL for the OAI repository
 	 * @param baseUrlsHttpsExclusion - if provided, the base URLs for the OAI repositories will ignore problems related with HTTPS certificate verification
 	 * @param timeout - timeout for HTTP connections
 	 * @throws HttpException
@@ -80,14 +80,14 @@ public class HttpOAIClient implements OAIClient {
 		initHttpClient();
 	}
 
-	
+
 	/**
-	 * Creates a HttpOAIClient 
-	 * 
-	 * @param baseUrl - the base URL for the OAI repository 
+	 * Creates a HttpOAIClient
+	 *
+	 * @param baseUrl - the base URL for the OAI repository
 	 * @param baseUrlsHttpsExclusion - if provided, the base URLs for the OAI repositories will ignore problems related with HTTPS certificate verification
 	 * @param timeout - timeout for HTTP connections
-	 * @param userAgent - the user agent to be used when communicating with the repository 
+	 * @param userAgent - the user agent to be used when communicating with the repository
 	 * @throws HttpException
 	 */
 	public HttpOAIClient(String baseUrl, List<String> baseUrlsHttpsExclusion, int timeout, String userAgent) throws HttpException {
@@ -121,7 +121,7 @@ public class HttpOAIClient implements OAIClient {
 	/**
 	 * Initializes the HTTP client and if the base URL is in the
 	 * baseUrlsHttpsExclusion then the certificate verification will not happen
-	 * 
+	 *
 	 * @throws HttpException
 	 */
 	private void initHttpClient() throws HttpException {
@@ -150,21 +150,15 @@ public class HttpOAIClient implements OAIClient {
 				httpclient = new DefaultHttpClient(createHttpParams());
 
 			}
-		} catch (KeyManagementException e) {
-			throw new HttpException(e);
-		} catch (UnrecoverableKeyException e) {
-			throw new HttpException(e);
-		} catch (NoSuchAlgorithmException e) {
-			throw new HttpException(e);
-		} catch (KeyStoreException e) {
+		} catch (KeyManagementException | KeyStoreException | NoSuchAlgorithmException | UnrecoverableKeyException e) {
 			throw new HttpException(e);
 		}
-	}
+    }
 
 	/**
 	 * Creates a HttpParams with the options connection and socket timeout (default timeout if none is defined: 1
 	 * minute)
-	 * 
+	 *
 	 * @return
 	 */
 	private HttpParams createHttpParams() {

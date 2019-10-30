@@ -22,7 +22,7 @@ import java.util.List;
 public class XSLPipeline {
     private InputStream inputStream;
     private ByteArrayOutputStream outputStream;
-    private List<Transformer> transformers = new ArrayList<Transformer>();
+    private List<Transformer> transformers = new ArrayList<>();
     private boolean omitXMLDeclaration;
 
     public XSLPipeline(InputStream inputStream, boolean omitXMLDeclaration) {

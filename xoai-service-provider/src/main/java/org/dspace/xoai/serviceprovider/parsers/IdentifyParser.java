@@ -55,7 +55,7 @@ public class IdentifyParser {
             identify.withDeletedRecord(DeletedRecord.fromValue(reader.getText()));
             reader.next(elementName(localPart(equalTo("granularity")))).next(text());
             identify.withGranularity(Granularity.fromRepresentation(reader.getText()));
-            
+
             while (reader.next(aStartElement(), theEndOfDocument()).current(elementName(localPart(equalTo("compression")))))
                 identify.withCompression(reader.next(text()).getText());
             if(reader.current(theEndOfDocument())) {
@@ -63,10 +63,10 @@ public class IdentifyParser {
             } else if (reader.current(elementName(localPart(equalTo("description"))))) {
             	identify.withDescription(reader.get(descriptionParser()));
 			}
-            
+
             while (reader.next(aStartElement(), theEndOfDocument()).current(elementName(localPart(equalTo("description")))))
             	identify.withDescription(reader.get(descriptionParser()));
-            
+
             return identify;
         } catch (XmlReaderException e) {
             throw new InvalidOAIResponse(e);
@@ -74,7 +74,7 @@ public class IdentifyParser {
     }
 
     private XmlReader.IslandParser<Description> descriptionParser() {
-        return new XmlReader.IslandParser<Description>() {
+        return new XmlReader.IslandParser<>() {
             @Override
             public Description parse(XmlReader reader) throws XmlReaderException {
                 return new Description(reader.retrieveCurrentAsString());

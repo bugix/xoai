@@ -88,11 +88,7 @@ public abstract class AbstractInMemoryDataProviderTest {
                     writer.close();
 //                    System.out.println(outputStream.toString());
                     return new ByteArrayInputStream(outputStream.toByteArray());
-                } catch (OAIException e) {
-                    throw new OAIRequestException(e);
-                } catch (XmlWriteException e) {
-                    throw new OAIRequestException(e);
-                } catch (XMLStreamException e) {
+                } catch (OAIException | XMLStreamException | XmlWriteException e) {
                     throw new OAIRequestException(e);
                 }
 

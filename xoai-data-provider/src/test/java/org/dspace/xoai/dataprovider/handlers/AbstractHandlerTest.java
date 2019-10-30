@@ -98,7 +98,7 @@ public abstract class AbstractHandlerTest {
     }
 
     protected Matcher<String> asInteger(final Matcher<Integer> matcher) {
-        return new TypeSafeMatcher<String>() {
+        return new TypeSafeMatcher<>() {
             @Override
             protected boolean matchesSafely(String item) {
                 return matcher.matches(Integer.valueOf(item));

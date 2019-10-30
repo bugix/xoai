@@ -40,7 +40,7 @@ public class MetadataSearchImpl extends AbstractMetadataSearcher<String> impleme
     }
 
     protected void consume(List<String> newNames, Element element) {
-        List<String> names = new ArrayList<String>(newNames);
+        List<String> names = new ArrayList<>(newNames);
         names.add(element.getName());
 
         if (!element.getFields().isEmpty()) {
@@ -48,7 +48,7 @@ public class MetadataSearchImpl extends AbstractMetadataSearcher<String> impleme
             	if (field.getName() != null && !field.getName().equals(DEFAULT_FIELD)) {
         			add(join(names, ".")+":"+ field.getName(), field.getValue());
         		} else {
-        			add(join(names, "."), field.getValue());	
+        			add(join(names, "."), field.getValue());
         		}
             }
         }
@@ -62,7 +62,7 @@ public class MetadataSearchImpl extends AbstractMetadataSearcher<String> impleme
 
     private void add(String name, String value) {
         if (!index.containsKey(name))
-            index.put(name, new ArrayList<String>());
+            index.put(name, new ArrayList<>());
 
         index.get(name).add(value);
     }

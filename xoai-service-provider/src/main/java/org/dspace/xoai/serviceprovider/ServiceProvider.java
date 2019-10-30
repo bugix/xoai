@@ -54,18 +54,18 @@ public class ServiceProvider {
     public Iterator<Record> listRecords (ListRecordsParameters parameters) throws BadArgumentException {
         if (!parameters.areValid())
             throw new BadArgumentException("ListRecords verb requires the metadataPrefix");
-        return new ItemIterator<Record>(new ListRecordHandler(context, parameters));
+        return new ItemIterator<>(new ListRecordHandler(context, parameters));
     }
 
     public Iterator<Header> listIdentifiers (ListIdentifiersParameters parameters) throws BadArgumentException {
         if (!parameters.areValid())
             throw new BadArgumentException("ListIdentifiers verb requires the metadataPrefix");
-        return new ItemIterator<Header>(new ListIdentifierHandler(context, parameters));
+        return new ItemIterator<>(new ListIdentifierHandler(context, parameters));
     }
 
     public Iterator<Set> listSets () throws NoSetHierarchyException {
         try {
-            return new ItemIterator<Set>(new ListSetsHandler(context));
+            return new ItemIterator<>(new ListSetsHandler(context));
         } catch (EncapsulatedKnownException ex) {
             throw get(ex, NoSetHierarchyException.class);
         }

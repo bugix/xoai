@@ -21,7 +21,7 @@ public class IslandParsers {
 
 
     public static XmlReader.IslandParser<Date> dateParser() {
-        return new XmlReader.IslandParser<Date>() {
+        return new XmlReader.IslandParser<>() {
             @Override
             public Date parse(XmlReader reader) throws XmlReaderException {
                 try {

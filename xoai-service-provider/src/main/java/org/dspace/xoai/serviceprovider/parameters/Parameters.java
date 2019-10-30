@@ -84,7 +84,7 @@ public class Parameters {
     }
 
     public String toUrl(String baseUrl) {
-        List<String> string = new ArrayList<String>();
+        List<String> string = new ArrayList<>();
         string.add("verb=" + this.verb.name());
         Granularity granularity = granularity();
         if (set != null) string.add("set=" + encode(set));
@@ -108,9 +108,9 @@ public class Parameters {
 				if(granularity.equals(possibleGranularity.toString())){
 					return possibleGranularity;
 				}
-				
+
 			}
-			
+
 		}
 		return Granularity.Second;
 	}
@@ -176,7 +176,7 @@ public class Parameters {
 
 	public void withGranularity(String granularity) {
 		this.granularity = granularity;
-		
+
 	}
 
 	public Object getGranularity() {

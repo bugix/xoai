@@ -22,7 +22,7 @@ public class Context {
     private static final TransformerFactory factory = TransformerFactory.newInstance();
 
     private Transformer transformer;
-    private Map<String, Transformer> metadataTransformers = new HashMap<String, Transformer>();
+    private Map<String, Transformer> metadataTransformers = new HashMap<>();
     private String baseUrl;
     private Granularity granularity;
     private OAIClient client;

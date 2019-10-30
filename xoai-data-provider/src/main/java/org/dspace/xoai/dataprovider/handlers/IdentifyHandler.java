@@ -89,9 +89,7 @@ public class IdentifyHandler extends VerbHandler<Identify> {
         if (descriptions == null) {
             try {
                 identify.withDescription(new Description(XmlWriter.toString(new XOAIDescription().withValue(XOAI_DESC))));
-            } catch (XmlWriteException e) {
-                log.warn("Description not added", e);
-            } catch (XMLStreamException e) {
+            } catch (XmlWriteException | XMLStreamException e) {
                 log.warn("Description not added", e);
             }
         } else {

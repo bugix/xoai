@@ -25,7 +25,7 @@ import static java.lang.Math.min;
 import static java.util.Arrays.asList;
 
 public class InMemoryItemRepository implements ItemRepository {
-    private List<InMemoryItem> list = new ArrayList<InMemoryItem>();
+    private List<InMemoryItem> list = new ArrayList<>();
 
     public InMemoryItemRepository withNoItems() {
         return this;
@@ -58,7 +58,7 @@ public class InMemoryItemRepository implements ItemRepository {
 
     @Override
     public ListItemIdentifiersResult getItemIdentifiers(List<ScopedFilter> filters, int offset, int length) throws OAIException {
-        return new ListItemIdentifiersResult(offset + length < list.size(), new ArrayList<ItemIdentifier>(list.subList(offset, min(offset + length, list.size()))));
+        return new ListItemIdentifiersResult(offset + length < list.size(), new ArrayList<>(list.subList(offset, min(offset + length, list.size()))));
     }
 
     @Override
@@ -98,7 +98,7 @@ public class InMemoryItemRepository implements ItemRepository {
 
     @Override
     public ListItemsResults getItems(List<ScopedFilter> filters, int offset, int length) throws OAIException {
-        return new ListItemsResults(offset + length < list.size(), new ArrayList<Item>(list.subList(offset, min(offset + length, list.size()))));
+        return new ListItemsResults(offset + length < list.size(), new ArrayList<>(list.subList(offset, min(offset + length, list.size()))));
     }
 
     @Override

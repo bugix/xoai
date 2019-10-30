@@ -43,7 +43,7 @@ public class UTCDateProviderTest {
     }
 
     private Matcher<String> toInt (final Matcher<Integer> integerMatcher) {
-        return new TypeSafeMatcher<String>() {
+        return new TypeSafeMatcher<>() {
             @Override
             protected boolean matchesSafely(String item) {
                 return integerMatcher.matches(Integer.valueOf(item));

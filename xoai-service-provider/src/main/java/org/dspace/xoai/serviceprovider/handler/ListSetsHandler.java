@@ -46,7 +46,7 @@ public class ListSetsHandler implements Source<Set> {
 
     @Override
     public List<Set> nextIteration() {
-        List<Set> sets = new ArrayList<Set>();
+        List<Set> sets = new ArrayList<>();
         InputStream stream = null;
         try {
             if (resumptionToken == null) { // First call
@@ -73,14 +73,9 @@ public class ListSetsHandler implements Source<Set> {
             } else ended = true;
             stream.close();
             return sets;
-        } catch (XmlReaderException e) {
+        } catch (XmlReaderException | IOException | OAIRequestException e) {
             throw new InvalidOAIResponse(e);
-        } catch (OAIRequestException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (IOException e){
-            throw new InvalidOAIResponse(e);
-        }
-        finally {
+        } finally {
             IOUtils.closeQuietly(stream);
         }
     }

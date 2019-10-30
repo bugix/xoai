@@ -28,7 +28,7 @@ public class SetRepositoryHelper {
     }
 
     public ListSetsResult getSets(Context context, int offset, int length) {
-        List<Set> results = new ArrayList<Set>();
+        List<Set> results = new ArrayList<>();
         List<Set> statics = context.getSets();
         if (offset < statics.size()) {
             log.debug("Offset less than static sets size");

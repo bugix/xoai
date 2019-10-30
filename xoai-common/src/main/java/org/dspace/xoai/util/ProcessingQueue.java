@@ -17,7 +17,7 @@ public class ProcessingQueue<E> {
     private Object hold;
 
     public ProcessingQueue() {
-        _queue = new LinkedList<E>();
+        _queue = new LinkedList<>();
         _finished = false;
         hold = new Object();
     }
@@ -34,7 +34,7 @@ public class ProcessingQueue<E> {
     public boolean hasFinished() {
         synchronized (_finished) {
             synchronized (_queue) {
-                return _finished.booleanValue() && _queue.isEmpty();
+                return _finished && _queue.isEmpty();
             }
         }
     }

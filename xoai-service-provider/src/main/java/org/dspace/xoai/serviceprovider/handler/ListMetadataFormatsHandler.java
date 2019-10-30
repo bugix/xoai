@@ -36,7 +36,7 @@ public class ListMetadataFormatsHandler {
 
 
     public List<MetadataFormat> handle(ListMetadataParameters parameters) throws IdDoesNotExistException {
-        List<MetadataFormat> result = new ArrayList<MetadataFormat>();
+        List<MetadataFormat> result = new ArrayList<>();
         InputStream stream = null;
         try {
             stream = client.execute(parameters()
@@ -47,11 +47,7 @@ public class ListMetadataFormatsHandler {
                 result.add(parser.next());
             stream.close();
             return result;
-        } catch (XmlReaderException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (OAIRequestException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (IOException e) {
+        } catch (XmlReaderException | IOException | OAIRequestException e) {
             throw new InvalidOAIResponse(e);
         } finally {
             IOUtils.closeQuietly(stream);

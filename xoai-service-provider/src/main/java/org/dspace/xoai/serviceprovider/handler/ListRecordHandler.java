@@ -50,7 +50,7 @@ public class ListRecordHandler implements Source<Record> {
     @Override
     public List<Record> nextIteration() {
     	//TODO - refactor - this and ListIdentifierHandler are pretty similar.
-        List<Record> records = new ArrayList<Record>();
+        List<Record> records = new ArrayList<>();
         InputStream stream = null;
         try {
             if (resumptionToken == null) { // First call
@@ -79,14 +79,10 @@ public class ListRecordHandler implements Source<Record> {
                         resumptionToken = text;
                 } else ended = true;
             } else ended = true;
-			
+
             stream.close();
             return records;
-        } catch (XmlReaderException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (OAIRequestException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (IOException e) {
+        } catch (XmlReaderException | IOException | OAIRequestException e) {
             throw new InvalidOAIResponse(e);
         } finally {
             IOUtils.closeQuietly(stream);

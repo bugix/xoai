@@ -33,7 +33,7 @@ public class MetadataSearcherItems extends AbstractMetadataSearcher<MetadataItem
 
 	@Override
 	protected void consume(List<String> newNames, Element element) {
-		 List<String> names = new ArrayList<String>(newNames);
+		 List<String> names = new ArrayList<>(newNames);
 	        names.add(element.getName());
 
 	        if (!element.getFields().isEmpty()) {
@@ -44,13 +44,13 @@ public class MetadataSearcherItems extends AbstractMetadataSearcher<MetadataItem
 	            for (Element subElement : element.getElements()) {
 	                consume(names, subElement);
 	            }
-	        }		
+	        }
 	}
 
 	private void add(String name, List<Field> fields) {
 		 if (!index.containsKey(name))
-	            index.put(name, new ArrayList<MetadataItem>());
-		 
+	            index.put(name, new ArrayList<>());
+
 		 MetadataItem newElement = new MetadataItem();
 		 for (Field field : fields) {
 			 if (field.getName() != null && !field.getName().equals(DEFAULT_FIELD)) {
@@ -60,7 +60,7 @@ public class MetadataSearcherItems extends AbstractMetadataSearcher<MetadataItem
 			 }
 		 }
 	        index.get(name).add(newElement);
-		
+
 	}
 
 	@Override
@@ -74,8 +74,8 @@ public class MetadataSearcherItems extends AbstractMetadataSearcher<MetadataItem
 	}
 
 
-	
 
-	
+
+
 
 }

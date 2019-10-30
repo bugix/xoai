@@ -45,13 +45,9 @@ public class GetRecordHandler {
                 parameters.getMetadataPrefix()).parse();
             stream.close();
             return record;
-        } catch (OAIRequestException e) {
+        } catch (OAIRequestException | IOException e) {
             throw new InvalidOAIResponse(e);
-        }
-        catch (IOException e) {
-            throw new InvalidOAIResponse(e);
-        }
-        finally {
+        } finally {
             IOUtils.closeQuietly(stream);
         }
     }

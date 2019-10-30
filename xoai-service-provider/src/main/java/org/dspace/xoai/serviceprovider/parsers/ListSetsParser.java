@@ -65,10 +65,10 @@ public class ListSetsParser {
     @SuppressWarnings("unchecked")
 	private Set parseSet() throws XmlReaderException {
         Set set = new Set();
-        
+
         String setName = null;
         String setSpec = null;
-        
+
         while(setName == null || setSpec == null) {
         	reader.next(aStartElement());
             QName elementName = reader.getName();
@@ -106,7 +106,7 @@ public class ListSetsParser {
 	 * @throws XmlReaderException
 	 */
 	public List<Set> parse() throws XmlReaderException {
-		List<Set> sets = new ArrayList<Set>();
+		List<Set> sets = new ArrayList<>();
 		while (hasNext())
             sets.add(next());
 		return sets;

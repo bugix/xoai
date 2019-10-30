@@ -49,7 +49,7 @@ public class ListIdentifierHandler implements Source<Header> {
 
     @Override
     public List<Header> nextIteration() {
-        List<Header> headers = new ArrayList<Header>();
+        List<Header> headers = new ArrayList<>();
         InputStream stream = null;
         try {
             if (resumptionToken == null) { // First call
@@ -79,11 +79,7 @@ public class ListIdentifierHandler implements Source<Header> {
             } else ended = true;
             stream.close();
             return headers;
-        } catch (XmlReaderException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (OAIRequestException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (IOException e) {
+        } catch (XmlReaderException | IOException | OAIRequestException e) {
             throw new InvalidOAIResponse(e);
         } finally {
             IOUtils.closeQuietly(stream);

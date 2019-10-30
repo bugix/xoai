@@ -25,13 +25,13 @@ import static java.util.Arrays.asList;
 
 public class OAIRequestParametersBuilder implements Builder<OAIRequest> {
     private final UTCDateProvider utcDateProvider = new UTCDateProvider();
-    private Map<String, List<String>> params = new HashMap<String, List<String>>();
+    private Map<String, List<String>> params = new HashMap<>();
 
     public OAIRequestParametersBuilder with(String name, String... values) {
         if (values == null || (values.length > 0 && values[0] == null))
             return without(name);
         if (!params.containsKey(name))
-            params.put(name, new ArrayList<String>());
+            params.put(name, new ArrayList<>());
 
         params.get(name).addAll(asList(values));
         return this;

@@ -37,9 +37,7 @@ public class IdentifyHandler {
             Identify identify = new IdentifyParser(stream).parse();
             stream.close();
             return identify;
-        } catch (OAIRequestException e) {
-            throw new InvalidOAIResponse(e);
-        } catch (IOException e) {
+        } catch (OAIRequestException | IOException e) {
             throw new InvalidOAIResponse(e);
         } finally {
             IOUtils.closeQuietly(stream);

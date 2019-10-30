@@ -156,13 +156,7 @@ public class ListRecordsHandler extends VerbHandler<ListRecords> {
                             .apply(format.getTransformer())
                             .process());
                 }
-            } catch (XMLStreamException e) {
-                throw new OAIException(e);
-            } catch (TransformerException e) {
-                throw new OAIException(e);
-            } catch (IOException e) {
-                throw new OAIException(e);
-            } catch (XmlWriteException e) {
+            } catch (XMLStreamException | XmlWriteException | IOException | TransformerException e) {
                 throw new OAIException(e);
             }
 

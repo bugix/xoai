@@ -25,7 +25,7 @@ public class InMemoryItem implements Item {
         return new InMemoryItem();
     }
 
-    private Map<String, Object> values = new HashMap<String, Object>();
+    private Map<String, Object> values = new HashMap<>();
 
     public static InMemoryItem randomItem() {
         return new InMemoryItem()
@@ -47,7 +47,7 @@ public class InMemoryItem implements Item {
 
     @Override
     public List<About> getAbout() {
-        return new ArrayList<About>();
+        return new ArrayList<>();
     }
 
     @Override
@@ -63,7 +63,7 @@ public class InMemoryItem implements Item {
             if (value instanceof String)
                 elementBuilder.withField(key, (String) value);
             else if (value instanceof Date)
-                elementBuilder.withField(key, ((Date) value).toString());
+                elementBuilder.withField(key, value.toString());
             else if (value instanceof List) {
                 List<String> obj = (List<String>) value;
                 int i = 1;
@@ -88,7 +88,7 @@ public class InMemoryItem implements Item {
     @Override
     public List<org.dspace.xoai.dataprovider.model.Set> getSets() {
         List<String> list = ((List<String>) values.get("sets"));
-        return new ListBuilder<String>().add(list.toArray(new String[list.size()])).build(new Function<String, org.dspace.xoai.dataprovider.model.Set>() {
+        return new ListBuilder<String>().add(list.toArray(new String[list.size()])).build(new Function<>() {
             @Override
             public org.dspace.xoai.dataprovider.model.Set apply(String elem) {
                 return new org.dspace.xoai.dataprovider.model.Set(elem);
