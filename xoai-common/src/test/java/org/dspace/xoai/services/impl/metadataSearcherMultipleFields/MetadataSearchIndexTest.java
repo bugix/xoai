@@ -20,29 +20,29 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 public class MetadataSearchIndexTest {
-	
-	@Test
-	public void retrieveIndex(){
-		XOAIMetadata xoaiMetadata = new XOAIMetadata();
-		xoaiMetadata.getElements().add(new Element("dc").withElement(new Element("creator").withField("value", "john doe")));
-		MetadataSearch metadataSearch = new MetadataSearchImpl(xoaiMetadata );
-		Map<String,List<String>> index = metadataSearch.index();
-		
-		assertEquals(1,index.size());
-		
-		assertEquals("john doe",index.get("dc.creator").get(0));
-		
-	}
 
-	@Test
-	public void emptyMetadataReturnsEmpty(){
-		XOAIMetadata xoaiMetadata = new XOAIMetadata();
-		MetadataSearch metadataSearch = new MetadataSearchImpl(xoaiMetadata );
-		Map<String,List<String>> index = metadataSearch.index();
-		
-		assertEquals(0,index.size());
-		
-		
-	}
+    @Test
+    public void retrieveIndex() {
+        XOAIMetadata xoaiMetadata = new XOAIMetadata();
+        xoaiMetadata.getElements().add(new Element("dc").withElement(new Element("creator").withField("value", "john doe")));
+        MetadataSearch metadataSearch = new MetadataSearchImpl(xoaiMetadata);
+        Map<String, List<String>> index = metadataSearch.index();
+
+        assertEquals(1, index.size());
+
+        assertEquals("john doe", index.get("dc.creator").get(0));
+
+    }
+
+    @Test
+    public void emptyMetadataReturnsEmpty() {
+        XOAIMetadata xoaiMetadata = new XOAIMetadata();
+        MetadataSearch metadataSearch = new MetadataSearchImpl(xoaiMetadata);
+        Map<String, List<String>> index = metadataSearch.index();
+
+        assertEquals(0, index.size());
+
+
+    }
 
 }

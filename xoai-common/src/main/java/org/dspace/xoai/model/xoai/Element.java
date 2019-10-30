@@ -77,11 +77,12 @@ public class Element implements XmlWritable {
         return this;
     }
 
-    public Element withField (Field field) {
+    public Element withField(Field field) {
         this.fields.add(field);
         return this;
     }
-    public Element withField (String name, String value) {
+
+    public Element withField(String name, String value) {
         this.fields.add(new Field(value, name));
         return this;
     }

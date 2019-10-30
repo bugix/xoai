@@ -28,7 +28,7 @@ public class IdentifyHandlerTest extends AbstractHandlerTest {
     }
 
     @Test(expected = InternalOAIException.class)
-    public void internalExceptionForInvalidConfiguration () {
+    public void internalExceptionForInvalidConfiguration() {
         theRepositoryConfiguration().withMaxListSets(0);
         new IdentifyHandler(aContext(), theRepository());
     }

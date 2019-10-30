@@ -40,6 +40,6 @@ public interface Verb extends XmlWritable {
 
     }
 
-    Type getType ();
+    Type getType();
 
 }

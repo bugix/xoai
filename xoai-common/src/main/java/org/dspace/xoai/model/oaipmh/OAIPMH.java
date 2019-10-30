@@ -55,7 +55,7 @@ public class OAIPMH implements XmlWritable {
         return this;
     }
 
-    public boolean hasErrors () {
+    public boolean hasErrors() {
         return !this.errors.isEmpty();
     }
 

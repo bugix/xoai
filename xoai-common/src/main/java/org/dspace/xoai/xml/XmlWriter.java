@@ -22,7 +22,7 @@ import java.io.OutputStream;
 import java.util.Date;
 
 public class XmlWriter extends com.lyncode.xml.XmlWriter {
-    public static String toString (XmlWritable writable) throws XMLStreamException, XmlWriteException {
+    public static String toString(XmlWritable writable) throws XMLStreamException, XmlWriteException {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         XmlWriter writer = new XmlWriter(outputStream, defaultContext());
         writable.write(writer);
@@ -30,7 +30,7 @@ public class XmlWriter extends com.lyncode.xml.XmlWriter {
         return outputStream.toString();
     }
 
-    public static WriterContext defaultContext () {
+    public static WriterContext defaultContext() {
         return new WriterContext(Granularity.Second, new SimpleResumptionTokenFormat());
     }
 
@@ -85,7 +85,7 @@ public class XmlWriter extends com.lyncode.xml.XmlWriter {
         }
     }
 
-    public void writeElement (String elementName, XmlWritable writable) throws XmlWriteException {
+    public void writeElement(String elementName, XmlWritable writable) throws XmlWriteException {
         try {
             if (writable != null) {
                 this.writeStartElement(elementName);
@@ -100,6 +100,7 @@ public class XmlWriter extends com.lyncode.xml.XmlWriter {
     public void writeElement(String elementName, Date date, Granularity granularity) throws XmlWriteException {
         this.writeElement(elementName, dateProvider.format(date, granularity));
     }
+
     public void writeElement(String elementName, Date date) throws XmlWriteException {
         this.writeElement(elementName, dateProvider.format(date, writerContext.granularity));
     }

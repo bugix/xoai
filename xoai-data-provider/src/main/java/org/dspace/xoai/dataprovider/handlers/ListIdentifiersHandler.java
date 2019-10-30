@@ -112,11 +112,11 @@ public class ListIdentifiersHandler extends VerbHandler<ListIdentifiers> {
 
 
     private Header createHeader(OAICompiledRequest parameters,
-                                    ItemIdentifier itemIdentifier) {
+                                ItemIdentifier itemIdentifier) {
         MetadataFormat format = getContext().formatForPrefix(parameters
                 .getMetadataPrefix());
         if (!itemIdentifier.isDeleted() && !canDisseminate(itemIdentifier, format))
-            throw new InternalOAIException("The item repository is currently providing items which cannot be disseminated with format "+format.getPrefix());
+            throw new InternalOAIException("The item repository is currently providing items which cannot be disseminated with format " + format.getPrefix());
 
         Header header = new Header();
         header.withDatestamp(itemIdentifier.getDatestamp());

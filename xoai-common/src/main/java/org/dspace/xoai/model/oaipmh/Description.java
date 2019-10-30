@@ -15,14 +15,15 @@ import org.dspace.xoai.xml.XmlWritable;
 import org.dspace.xoai.xml.XmlWriter;
 
 public class Description implements XmlWritable {
-    public static Description description (XOAIMetadata metadata) {
+    public static Description description(XOAIMetadata metadata) {
         return new Description(metadata);
     }
 
     protected String value;
     private XOAIMetadata XOAIMetadata;
 
-    public Description() {}
+    public Description() {
+    }
 
     public Description(XOAIMetadata XOAIMetadata) {
         this.XOAIMetadata = XOAIMetadata;
@@ -36,6 +37,7 @@ public class Description implements XmlWritable {
         this.XOAIMetadata = XOAIMetadata;
         return this;
     }
+
     public Description withMetadata(String metadata) {
         this.value = metadata;
         return this;

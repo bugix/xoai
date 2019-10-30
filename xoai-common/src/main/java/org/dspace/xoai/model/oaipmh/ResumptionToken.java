@@ -25,10 +25,11 @@ public class ResumptionToken implements XmlWritable {
     private Long completeListSize;
     private Long cursor;
 
-    public ResumptionToken (Value value) {
+    public ResumptionToken(Value value) {
         this.value = value;
     }
-    public ResumptionToken () {
+
+    public ResumptionToken() {
         this.value = new Value();
     }
 
@@ -86,7 +87,7 @@ public class ResumptionToken implements XmlWritable {
         private Date until;
         private String metadataPrefix;
 
-        public boolean isEmpty () {
+        public boolean isEmpty() {
             return isNull().apply(offset) &&
                     isNull().apply(set) &&
                     isNull().apply(from) &&
@@ -94,32 +95,32 @@ public class ResumptionToken implements XmlWritable {
                     isNull().apply(metadataPrefix);
         }
 
-        public Value withOffset (long integer) {
+        public Value withOffset(long integer) {
             this.offset = integer;
             return this;
         }
 
-        public Value withSetSpec (String setSpec) {
+        public Value withSetSpec(String setSpec) {
             this.set = setSpec;
             return this;
         }
 
-        public Value withFrom (Date from) {
+        public Value withFrom(Date from) {
             this.from = from;
             return this;
         }
 
-        public Value withUntil (Date until) {
+        public Value withUntil(Date until) {
             this.until = until;
             return this;
         }
 
-        public Value withMetadataPrefix (String metadataPrefix) {
+        public Value withMetadataPrefix(String metadataPrefix) {
             this.metadataPrefix = metadataPrefix;
             return this;
         }
 
-        public Value next (long sum) {
+        public Value next(long sum) {
             return new Value().withSetSpec(set)
                     .withFrom(from)
                     .withUntil(until)

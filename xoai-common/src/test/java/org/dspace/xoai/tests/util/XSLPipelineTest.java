@@ -51,7 +51,6 @@ public class XSLPipelineTest {
     }
 
 
-
     protected Transformer identityTransformer() {
         try {
             return tFactory.newTransformer();

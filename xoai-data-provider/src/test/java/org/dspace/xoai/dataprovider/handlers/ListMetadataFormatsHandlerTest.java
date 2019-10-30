@@ -28,7 +28,7 @@ public class ListMetadataFormatsHandlerTest extends AbstractHandlerTest {
     }
 
     @Test
-    public void validResponseForAllMetadataFormats () throws Exception{
+    public void validResponseForAllMetadataFormats() throws Exception {
         aContext().withMetadataFormat("xoai", identity());
         ListMetadataFormatsHandler underTest = new ListMetadataFormatsHandler(theContext(), theRepository());
         String result = write(underTest.handle(a(request().withVerb(ListMetadataFormats))));
@@ -38,14 +38,14 @@ public class ListMetadataFormatsHandlerTest extends AbstractHandlerTest {
 
 
     @Test(expected = IdDoesNotExistException.class)
-    public void itemNotExists () throws Exception{
+    public void itemNotExists() throws Exception {
         aContext().withMetadataFormat("xoai", identity());
         ListMetadataFormatsHandler underTest = new ListMetadataFormatsHandler(theContext(), theRepository());
         underTest.handle(a(request().withVerb(ListMetadataFormats).withIdentifier("1")));
     }
 
     @Test(expected = NoMetadataFormatsException.class)
-    public void noFormatForItem () throws Exception{
+    public void noFormatForItem() throws Exception {
         theItemRepository().withItem(item().withDefaults().withIdentifier("1"));
         aContext().withMetadataFormat("xoai", identity(), alwaysFalseCondition());
         ListMetadataFormatsHandler underTest = new ListMetadataFormatsHandler(theContext(), theRepository());
@@ -54,7 +54,7 @@ public class ListMetadataFormatsHandlerTest extends AbstractHandlerTest {
 
 
     @Test
-    public void validResponseForAnItem () throws Exception{
+    public void validResponseForAnItem() throws Exception {
         theItemRepository().withItem(item().withDefaults().withIdentifier("1"));
         aContext().withMetadataFormat("xoai", identity());
         ListMetadataFormatsHandler underTest = new ListMetadataFormatsHandler(theContext(), theRepository());

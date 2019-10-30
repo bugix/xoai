@@ -28,7 +28,7 @@ import static org.dspace.xoai.dataprovider.parameters.OAIRequest.Parameter.*;
 public class DataProvider {
     private static final Logger log = LoggerFactory.getLogger(DataProvider.class);
 
-    public static DataProvider dataProvider (Context context, Repository repository) {
+    public static DataProvider dataProvider(Context context, Repository repository) {
         return new DataProvider(context, repository);
     }
 
@@ -43,7 +43,7 @@ public class DataProvider {
     private final ListMetadataFormatsHandler listMetadataFormatsHandler;
     private final ErrorHandler errorsHandler;
 
-    public DataProvider (Context context, Repository repository) {
+    public DataProvider(Context context, Repository repository) {
         this.repository = repository;
         this.dateProvider = new UTCDateProvider();
 
@@ -56,11 +56,11 @@ public class DataProvider {
         this.errorsHandler = new ErrorHandler();
     }
 
-    public OAIPMH handle (Builder<OAIRequest> builder) throws OAIException {
+    public OAIPMH handle(Builder<OAIRequest> builder) throws OAIException {
         return handle(builder.build());
     }
 
-    public OAIPMH handle (OAIRequest requestParameters) throws OAIException {
+    public OAIPMH handle(OAIRequest requestParameters) throws OAIException {
         log.debug("Starting handling OAI request");
         Request request = new Request(repository.getConfiguration().getBaseUrl())
                 .withVerbType(requestParameters.get(Verb))

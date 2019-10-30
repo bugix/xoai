@@ -28,8 +28,7 @@ public interface ItemRepository {
      *
      * @param identifier Unique identifier of the item
      * @return ItemHelper
-     * @throws org.dspace.xoai.dataprovider.exceptions.IdDoesNotExistException
-     *
+     * @throws org.dspace.xoai.dataprovider.exceptions.IdDoesNotExistException exception
      * @see <a href="client://www.openarchives.org/OAI/openarchivesprotocol.html#UniqueIdentifier">Unique identifier definition</a>
      */
     Item getItem(String identifier)

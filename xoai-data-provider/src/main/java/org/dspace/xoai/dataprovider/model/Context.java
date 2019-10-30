@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Context {
-    public static Context context () {
+    public static Context context() {
         return new Context();
     }
 
@@ -52,7 +52,7 @@ public class Context {
 
     public Context withMetadataFormat(MetadataFormat metadataFormat) {
         int remove = -1;
-        for (int i = 0;i<metadataFormats.size();i++)
+        for (int i = 0; i < metadataFormats.size(); i++)
             if (metadataFormats.get(i).getPrefix().equals(metadataFormat.getPrefix()))
                 remove = i;
         if (remove >= 0)

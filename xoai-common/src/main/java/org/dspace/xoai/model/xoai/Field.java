@@ -23,7 +23,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.AllOf.allOf;
 
 public class Field implements XmlWritable {
-    public static Field parse (XmlReader reader) throws XmlReaderException {
+    public static Field parse(XmlReader reader) throws XmlReaderException {
         if (!reader.current(allOf(aStartElement(), elementName(localPart(equalTo("field"))))))
             throw new XmlReaderException("Invalid XML. Expecting entity 'field'");
 

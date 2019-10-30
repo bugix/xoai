@@ -51,7 +51,7 @@ public class DataProviderTest extends AbstractHandlerTest {
     }
 
     @Test
-    public void incompleteResponseFirstPage () throws Exception {
+    public void incompleteResponseFirstPage() throws Exception {
         theItemRepository().withRandomItems(10);
         theRepositoryConfiguration().withMaxListRecords(5);
         String result = write(dataProvider.handle(request()
@@ -63,7 +63,7 @@ public class DataProviderTest extends AbstractHandlerTest {
     }
 
     @Test
-    public void incompleteResponseLastPage () throws Exception {
+    public void incompleteResponseLastPage() throws Exception {
         theItemRepository().withRandomItems(10);
         theRepositoryConfiguration().withMaxListRecords(5);
         String result = write(dataProvider.handle(request()
@@ -80,7 +80,7 @@ public class DataProviderTest extends AbstractHandlerTest {
         return XPathMatchers.hasXPath(xpath, OAI_NAMESPACE);
     }
 
-    private Matcher<String> xPath (String xpath, Matcher<String> valueMatcher) {
+    private Matcher<String> xPath(String xpath, Matcher<String> valueMatcher) {
         return XPathMatchers.xPath(xpath, valueMatcher, OAI_NAMESPACE);
     }
 

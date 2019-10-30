@@ -16,7 +16,7 @@ public enum Granularity {
     Day("YYYY-MM-DD"),
     Second("YYYY-MM-DDThh:mm:ssZ");
 
-    public static Granularity fromRepresentation (String representation) {
+    public static Granularity fromRepresentation(String representation) {
         for (Granularity granularity : Granularity.values())
             if (granularity.toString().equals(representation))
                 return granularity;
@@ -26,11 +26,11 @@ public enum Granularity {
 
     private final String representation;
 
-    Granularity (String representation) {
+    Granularity(String representation) {
         this.representation = representation;
     }
 
-    public String toString () {
+    public String toString() {
         return representation;
     }
 }

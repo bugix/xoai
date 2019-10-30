@@ -16,5 +16,5 @@ import org.dspace.xoai.dataprovider.filter.FilterResolver;
  * @version 3.1.0
  */
 public interface Condition {
-    Filter getFilter (FilterResolver filterResolver);
+    Filter getFilter(FilterResolver filterResolver);
 }

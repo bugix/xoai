@@ -21,7 +21,7 @@ public class ListMetadataFormats implements Verb {
         return this.metadataFormats;
     }
 
-    public ListMetadataFormats withMetadataFormat (MetadataFormat mdf) {
+    public ListMetadataFormats withMetadataFormat(MetadataFormat mdf) {
         metadataFormats.add(mdf);
         return this;
     }

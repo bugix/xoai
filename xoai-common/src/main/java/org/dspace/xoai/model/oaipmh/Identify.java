@@ -92,15 +92,17 @@ public class Identify implements Verb {
         return this.descriptions;
     }
 
-    public Identify withAdminEmail (String adminEmail) {
+    public Identify withAdminEmail(String adminEmail) {
         this.adminEmails.add(adminEmail);
         return this;
     }
-    public Identify withCompression (String compression) {
+
+    public Identify withCompression(String compression) {
         this.compressions.add(compression);
         return this;
     }
-    public Identify withDescription (Description description) {
+
+    public Identify withDescription(Description description) {
         this.descriptions.add(description);
         return this;
     }

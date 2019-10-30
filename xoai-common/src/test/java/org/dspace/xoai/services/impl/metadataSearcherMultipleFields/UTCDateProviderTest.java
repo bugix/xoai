@@ -34,7 +34,7 @@ public class UTCDateProviderTest {
         String result = underTest.format(DATE);
 
         assertThat(result, pattern(SECOND_FORMAT, 1, toInt(is(getCalendar(DATE).get(Calendar.YEAR)))));
-        assertThat(result, pattern(SECOND_FORMAT, 2, toInt(is(getCalendar(DATE).get(Calendar.MONTH)+1))));
+        assertThat(result, pattern(SECOND_FORMAT, 2, toInt(is(getCalendar(DATE).get(Calendar.MONTH) + 1))));
         assertThat(result, pattern(SECOND_FORMAT, 3, toInt(is(getCalendar(DATE).get(Calendar.DAY_OF_MONTH)))));
 
         assertThat(result, pattern(SECOND_FORMAT, 4, toInt(is(getCalendar(DATE).get(Calendar.HOUR_OF_DAY)))));
@@ -42,7 +42,7 @@ public class UTCDateProviderTest {
         assertThat(result, pattern(SECOND_FORMAT, 6, toInt(is(getCalendar(DATE).get(Calendar.SECOND)))));
     }
 
-    private Matcher<String> toInt (final Matcher<Integer> integerMatcher) {
+    private Matcher<String> toInt(final Matcher<Integer> integerMatcher) {
         return new TypeSafeMatcher<>() {
             @Override
             protected boolean matchesSafely(String item) {
@@ -56,7 +56,7 @@ public class UTCDateProviderTest {
         };
     }
 
-    private Calendar getCalendar (Date date) {
+    private Calendar getCalendar(Date date) {
         Calendar instance = Calendar.getInstance();
         instance.setTime(date);
         return instance;

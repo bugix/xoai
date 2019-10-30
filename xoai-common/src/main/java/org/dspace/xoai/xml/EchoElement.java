@@ -72,7 +72,7 @@ public class EchoElement implements XmlWritable {
                 }
             }
         } catch (XMLStreamException e) {
-            throw new XmlWriteException("Error trying to output '"+this.xmlString+"'", e);
+            throw new XmlWriteException("Error trying to output '" + this.xmlString + "'", e);
         }
     }
 

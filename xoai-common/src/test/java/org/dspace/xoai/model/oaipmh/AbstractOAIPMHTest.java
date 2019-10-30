@@ -22,7 +22,7 @@ import java.util.Date;
 
 public abstract class AbstractOAIPMHTest {
 
-    protected String writingResult (XmlWritable writable) throws XMLStreamException, XmlWriteException {
+    protected String writingResult(XmlWritable writable) throws XMLStreamException, XmlWriteException {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         XmlWriter writer = new XmlWriter(stream);
         writer.writeStartDocument();

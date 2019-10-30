@@ -28,7 +28,7 @@ public class ResumptionTokenHelper {
         return this;
     }
 
-    public ResumptionToken resolve (boolean hasMoreResults) {
+    public ResumptionToken resolve(boolean hasMoreResults) {
         if (isInitialOffset() && !hasMoreResults) return null;
         else {
             if (hasMoreResults) {

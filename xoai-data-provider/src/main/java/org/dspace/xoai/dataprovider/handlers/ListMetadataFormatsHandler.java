@@ -48,9 +48,9 @@ public class ListMetadataFormatsHandler extends VerbHandler<ListMetadataFormats>
                 throw new NoMetadataFormatsException();
             for (MetadataFormat metadataFormat : metadataFormats) {
                 org.dspace.xoai.model.oaipmh.MetadataFormat format = new org.dspace.xoai.model.oaipmh.MetadataFormat()
-                    .withMetadataPrefix(metadataFormat.getPrefix())
-                    .withMetadataNamespace(metadataFormat.getNamespace())
-                    .withSchema(metadataFormat.getSchemaLocation());
+                        .withMetadataPrefix(metadataFormat.getPrefix())
+                        .withMetadataNamespace(metadataFormat.getNamespace())
+                        .withSchema(metadataFormat.getSchemaLocation());
                 result.withMetadataFormat(format);
             }
         } else {

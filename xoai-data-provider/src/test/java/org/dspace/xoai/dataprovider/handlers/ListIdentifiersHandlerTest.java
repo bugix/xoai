@@ -25,7 +25,7 @@ public class ListIdentifiersHandlerTest extends AbstractHandlerTest {
     private final ListIdentifiersHandler underTest = new ListIdentifiersHandler(aContext(), theRepository());
 
     @Test(expected = BadArgumentException.class)
-    public void metadataPrefixIsMandatory () throws Exception {
+    public void metadataPrefixIsMandatory() throws Exception {
         underTest.handle(a(request()
                 .withVerb(ListIdentifiers)));
     }
@@ -35,11 +35,11 @@ public class ListIdentifiersHandlerTest extends AbstractHandlerTest {
         theItemRepository().withItem(item().withDefaults().withIdentifier("1"));
         aContext().withMetadataFormat(EXISTING_METADATA_FORMAT, identity());
         underTest.handle(a(request().withVerb(ListIdentifiers)
-              .withMetadataPrefix("abcd")));
+                .withMetadataPrefix("abcd")));
     }
 
     @Test(expected = DoesNotSupportSetsException.class)
-    public void doesNotSupportSets () throws Exception {
+    public void doesNotSupportSets() throws Exception {
         theSetRepository().doesNotSupportSets();
         underTest.handle(a(request()
                 .withVerb(ListIdentifiers)
@@ -48,14 +48,14 @@ public class ListIdentifiersHandlerTest extends AbstractHandlerTest {
     }
 
     @Test(expected = NoMatchesException.class)
-    public void responseWithoutItems () throws Exception {
+    public void responseWithoutItems() throws Exception {
         underTest.handle(a(request()
                 .withVerb(ListIdentifiers)
                 .withMetadataPrefix(EXISTING_METADATA_FORMAT)));
     }
 
     @Test
-    public void responseWithItems () throws Exception {
+    public void responseWithItems() throws Exception {
         theItemRepository().withRandomItems(10);
         String result = write(underTest.handle(a(request().withVerb(ListIdentifiers).withMetadataPrefix(EXISTING_METADATA_FORMAT))));
 

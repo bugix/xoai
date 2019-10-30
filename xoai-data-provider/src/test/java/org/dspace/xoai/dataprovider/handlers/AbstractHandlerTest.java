@@ -66,7 +66,7 @@ public abstract class AbstractHandlerTest {
         });
     }
 
-    protected OAICompiledRequest a (OAIRequestParametersBuilder builder) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
+    protected OAICompiledRequest a(OAIRequestParametersBuilder builder) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return OAICompiledRequest.compile(builder);
     }
 
@@ -74,10 +74,11 @@ public abstract class AbstractHandlerTest {
         return new OAIRequestParametersBuilder();
     }
 
-    protected Context aContext () {
+    protected Context aContext() {
         return context;
     }
-    protected Context theContext () {
+
+    protected Context theContext() {
         return context;
     }
 
@@ -85,7 +86,7 @@ public abstract class AbstractHandlerTest {
         return setRepository;
     }
 
-    protected InMemoryItemRepository theItemRepository () {
+    protected InMemoryItemRepository theItemRepository() {
         return itemRepository;
     }
 

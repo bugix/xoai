@@ -11,5 +11,5 @@ package org.dspace.xoai.xml;
 import com.lyncode.xml.exceptions.XmlWriteException;
 
 public interface XmlWritable {
-    void write (XmlWriter writer) throws XmlWriteException;
+    void write(XmlWriter writer) throws XmlWriteException;
 }

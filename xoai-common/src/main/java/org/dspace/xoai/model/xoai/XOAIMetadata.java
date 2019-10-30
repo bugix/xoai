@@ -39,7 +39,7 @@ public class XOAIMetadata implements XmlWritable {
 
     private static final String DEFAULT_FIELD = "value";
 
-    public static XOAIMetadata parse (InputStream inputStream) throws XmlReaderException {
+    public static XOAIMetadata parse(InputStream inputStream) throws XmlReaderException {
         XmlReader reader = new XmlReader(inputStream);
         XOAIMetadata XOAIMetadata = new XOAIMetadata();
         if (!reader.next(aStartElement()).current(allOf(aStartElement(), elementName(localPart(equalTo("metadata"))))))
@@ -68,7 +68,7 @@ public class XOAIMetadata implements XmlWritable {
         return this.elements;
     }
 
-    public XOAIMetadata withElement (Element element) {
+    public XOAIMetadata withElement(Element element) {
         this.elements.add(element);
         return this;
     }
@@ -107,7 +107,7 @@ public class XOAIMetadata implements XmlWritable {
     /**
      * @return a simple searcher that returns search results as String elements.
      */
-    public MetadataSearch<String> searcher () {
+    public MetadataSearch<String> searcher() {
         return new MetadataSearchImpl(this);
     }
 

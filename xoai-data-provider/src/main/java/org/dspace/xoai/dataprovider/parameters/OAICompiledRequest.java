@@ -38,19 +38,19 @@ import static org.hamcrest.CoreMatchers.*;
  */
 public class OAICompiledRequest {
 
-    public static OAICompiledRequest compile (OAIRequest request) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
+    public static OAICompiledRequest compile(OAIRequest request) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request);
     }
 
-    public static OAICompiledRequest compile (OAIRequest request, ResumptionTokenFormat formatter) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
+    public static OAICompiledRequest compile(OAIRequest request, ResumptionTokenFormat formatter) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request, formatter);
     }
 
-    public static OAICompiledRequest compile (Builder<OAIRequest> request) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
+    public static OAICompiledRequest compile(Builder<OAIRequest> request) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request.build());
     }
 
-    public static OAICompiledRequest compile (Builder<OAIRequest> request, ResumptionTokenFormat formatter) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
+    public static OAICompiledRequest compile(Builder<OAIRequest> request, ResumptionTokenFormat formatter) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request.build(), formatter);
     }
 

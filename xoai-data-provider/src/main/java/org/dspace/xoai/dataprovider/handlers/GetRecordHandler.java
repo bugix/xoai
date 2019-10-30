@@ -43,7 +43,7 @@ public class GetRecordHandler extends VerbHandler<GetRecord> {
 
         MetadataFormat format = getContext().formatForPrefix(parameters.getMetadataPrefix());
         if (format == null) {
-            throw new CannotDisseminateFormatException("Format "+parameters.getMetadataPrefix()+" not applicable to this item");
+            throw new CannotDisseminateFormatException("Format " + parameters.getMetadataPrefix() + " not applicable to this item");
         }
 
         Item item = getRepository().getItemRepository().getItem(parameters.getIdentifier());
@@ -54,7 +54,7 @@ public class GetRecordHandler extends VerbHandler<GetRecord> {
 
         if (format.hasCondition() &&
                 !format.getCondition().getFilter(getRepository().getFilterResolver()).isItemShown(item))
-            throw new CannotDisseminateFormatException("Format "+parameters.getMetadataPrefix()+" not applicable to this item");
+            throw new CannotDisseminateFormatException("Format " + parameters.getMetadataPrefix() + " not applicable to this item");
 
 
         header.withIdentifier(item.getIdentifier());

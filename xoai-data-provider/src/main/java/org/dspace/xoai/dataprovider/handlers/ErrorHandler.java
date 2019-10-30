@@ -42,13 +42,13 @@ public class ErrorHandler {
                     .withCode(Error.Code.CANNOT_DISSEMINATE_FORMAT);
         } else if (ex instanceof DuplicateDefinitionException) {
             return new Error(ex.getMessage())
-                .withCode(Error.Code.BAD_ARGUMENT);
+                    .withCode(Error.Code.BAD_ARGUMENT);
         } else if (ex instanceof UnknownParameterException) {
             return new Error(ex.getMessage())
-                .withCode(Error.Code.BAD_ARGUMENT);
+                    .withCode(Error.Code.BAD_ARGUMENT);
         } else {
             return new Error(ex.getMessage())
-                .withCode(Error.Code.BAD_ARGUMENT);
+                    .withCode(Error.Code.BAD_ARGUMENT);
         }
     }
 

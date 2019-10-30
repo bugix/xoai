@@ -45,6 +45,7 @@ public class OAIRequestParametersBuilder implements Builder<OAIRequest> {
     public OAIRequestParametersBuilder withVerb(String verb) {
         return with("verb", verb);
     }
+
     public OAIRequestParametersBuilder withVerb(Verb.Type verb) {
         return with("verb", verb.displayName());
     }
@@ -80,7 +81,7 @@ public class OAIRequestParametersBuilder implements Builder<OAIRequest> {
         return with("resumptionToken", resumptionToken);
     }
 
-    public OAICompiledRequest compile () throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
+    public OAICompiledRequest compile() throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return this.build().compile();
     }
 

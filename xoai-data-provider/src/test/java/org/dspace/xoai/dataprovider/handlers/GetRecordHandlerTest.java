@@ -27,7 +27,7 @@ public class GetRecordHandlerTest extends AbstractHandlerTest {
     private GetRecordHandler underTest;
 
     @Before
-    public void setup () {
+    public void setup() {
         underTest = new GetRecordHandler(aContext(), theRepository());
     }
 

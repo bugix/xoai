@@ -19,7 +19,7 @@ import java.util.List;
  * @version 3.1.0
  */
 public class Set {
-    public static Set set (String spec) {
+    public static Set set(String spec) {
         return new Set(spec);
     }
 
@@ -71,7 +71,7 @@ public class Set {
         return spec;
     }
 
-    public org.dspace.xoai.model.oaipmh.Set toOAIPMH () {
+    public org.dspace.xoai.model.oaipmh.Set toOAIPMH() {
         org.dspace.xoai.model.oaipmh.Set set = new org.dspace.xoai.model.oaipmh.Set();
         set.withName(getName());
         set.withSpec(getSpec());

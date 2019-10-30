@@ -14,7 +14,7 @@ import org.dspace.xoai.services.api.ResumptionTokenFormat;
 public class Repository {
     private FilterResolver filterResolver;
 
-    public static Repository repository () {
+    public static Repository repository() {
         return new Repository();
     }
 

@@ -24,7 +24,7 @@ public abstract class VerbHandler<T extends XmlWritable> {
     private final Context context;
     private final Repository repository;
 
-    public VerbHandler (Context context, Repository repository) {
+    public VerbHandler(Context context, Repository repository) {
         this.context = context;
         this.repository = repository;
     }
@@ -37,11 +37,11 @@ public abstract class VerbHandler<T extends XmlWritable> {
         return repository;
     }
 
-    public T handle (OAIRequest parameters) throws HandlerException, InvalidResumptionTokenException, OAIException {
+    public T handle(OAIRequest parameters) throws HandlerException, InvalidResumptionTokenException, OAIException {
         return handle(parameters.compile());
     }
 
-    public T handle (OAIRequestParametersBuilder parameters) throws OAIException, HandlerException, InvalidResumptionTokenException {
+    public T handle(OAIRequestParametersBuilder parameters) throws OAIException, HandlerException, InvalidResumptionTokenException {
         return handle(parameters.build());
     }
 

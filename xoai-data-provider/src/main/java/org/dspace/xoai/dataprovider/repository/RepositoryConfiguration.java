@@ -70,7 +70,7 @@ public class RepositoryConfiguration {
         return descriptions;
     }
 
-    public List<String> getCompressions () {
+    public List<String> getCompressions() {
         return compressions;
     }
 
@@ -89,7 +89,7 @@ public class RepositoryConfiguration {
         return this;
     }
 
-    public RepositoryConfiguration and () {
+    public RepositoryConfiguration and() {
         return this;
     }
 
@@ -102,6 +102,7 @@ public class RepositoryConfiguration {
         this.adminEmails.add(email);
         return this;
     }
+
     public RepositoryConfiguration withDeleteMethod(DeletedRecord deleteMethod) {
         this.deleteMethod = deleteMethod;
         return this;
@@ -124,7 +125,7 @@ public class RepositoryConfiguration {
         return this;
     }
 
-    public RepositoryConfiguration withCompression (String compression) {
+    public RepositoryConfiguration withCompression(String compression) {
         if (compressions == null)
             compressions = new ArrayList<>();
         compressions.add(compression);
@@ -136,7 +137,7 @@ public class RepositoryConfiguration {
         return this;
     }
 
-    public RepositoryConfiguration withDefaults () {
+    public RepositoryConfiguration withDefaults() {
         this.repositoryName = "Repository";
         this.earliestDate = new Date();
         this.adminEmails.add("sample@test.com");

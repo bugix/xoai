@@ -18,7 +18,7 @@ public class Error implements XmlWritable {
     private final String value;
     private Code code;
 
-    public Error (String message) {
+    public Error(String message) {
         this.value = message;
     }
 
@@ -67,7 +67,6 @@ public class Error implements XmlWritable {
         public String code() {
             return code;
         }
-
 
 
         public static Code fromCode(String code) {

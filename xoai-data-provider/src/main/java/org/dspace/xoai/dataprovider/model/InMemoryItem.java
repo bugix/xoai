@@ -21,7 +21,7 @@ import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 
 public class InMemoryItem implements Item {
-    public static InMemoryItem item () {
+    public static InMemoryItem item() {
         return new InMemoryItem();
     }
 

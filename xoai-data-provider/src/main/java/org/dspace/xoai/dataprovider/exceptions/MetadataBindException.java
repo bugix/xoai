@@ -9,27 +9,22 @@
 package org.dspace.xoai.dataprovider.exceptions;
 
 @SuppressWarnings("serial")
-public class MetadataBindException extends Exception
-{
+public class MetadataBindException extends Exception {
 
-    public MetadataBindException()
-    {
+    public MetadataBindException() {
         super();
     }
 
-    public MetadataBindException(String arg0, Throwable arg1)
-    {
+    public MetadataBindException(String arg0, Throwable arg1) {
         super(arg0, arg1);
     }
 
-    public MetadataBindException(String arg0)
-    {
+    public MetadataBindException(String arg0) {
         super(arg0);
     }
 
-    public MetadataBindException(Throwable arg0)
-    {
+    public MetadataBindException(Throwable arg0) {
         super(arg0);
     }
-    
+
 }

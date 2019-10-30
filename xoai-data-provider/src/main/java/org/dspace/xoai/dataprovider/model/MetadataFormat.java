@@ -15,7 +15,7 @@ import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerFactory;
 
 public class MetadataFormat {
-    public static Transformer identity () {
+    public static Transformer identity() {
         try {
             return TransformerFactory.newInstance().newTransformer();
         } catch (TransformerConfigurationException e) {
@@ -23,7 +23,7 @@ public class MetadataFormat {
         }
     }
 
-    public static MetadataFormat metadataFormat (String prefix) {
+    public static MetadataFormat metadataFormat(String prefix) {
         return new MetadataFormat().withPrefix(prefix);
     }
 

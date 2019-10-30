@@ -43,7 +43,7 @@ public class OAICompiledRequestTest {
     }
 
     @Test
-    public void resumptionTokenEmptyByDefault () throws Exception{
+    public void resumptionTokenEmptyByDefault() throws Exception {
         assertThat(aRequest().withVerb(ListSets)
                 .compile()
                 .getResumptionToken()

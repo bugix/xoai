@@ -40,14 +40,14 @@ public class ListRecordsHandlerTest extends AbstractHandlerTest {
     }
 
     @Test(expected = NoMatchesException.class)
-    public void noMatchRecords () throws Exception {
+    public void noMatchRecords() throws Exception {
         underTest.handle(request()
                 .withVerb(ListRecords)
                 .withMetadataPrefix(EXISTING_METADATA_FORMAT));
     }
 
     @Test(expected = DoesNotSupportSetsException.class)
-    public void setRequestAndSetsNotSupported () throws Exception {
+    public void setRequestAndSetsNotSupported() throws Exception {
         theSetRepository().doesNotSupportSets();
         underTest.handle(request()
                 .withVerb(ListRecords)

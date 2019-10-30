@@ -59,7 +59,7 @@ public class Header implements XmlWritable {
         return this;
     }
 
-    public boolean isDeleted () {
+    public boolean isDeleted() {
         return this.status != null;
     }
 

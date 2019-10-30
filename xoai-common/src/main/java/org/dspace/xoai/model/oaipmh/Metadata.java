@@ -47,7 +47,7 @@ public class Metadata implements XmlWritable {
         }
     }
 
-    public XOAIMetadata getValue () {
+    public XOAIMetadata getValue() {
         return value;
     }
 

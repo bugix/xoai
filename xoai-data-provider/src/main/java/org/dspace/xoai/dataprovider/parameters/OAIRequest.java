@@ -41,15 +41,15 @@ public class OAIRequest {
 
         private final String representation;
 
-        Parameter (String rep) {
+        Parameter(String rep) {
             this.representation = rep;
         }
 
-        public String toString () {
+        public String toString() {
             return representation;
         }
 
-        public static Parameter fromRepresentation (String representation) {
+        public static Parameter fromRepresentation(String representation) {
             for (Parameter param : Parameter.values())
                 if (param.representation.equals(representation))
                     return param;
@@ -65,7 +65,7 @@ public class OAIRequest {
         this.map = map;
     }
 
-    public void validate (Parameter parameter) throws IllegalVerbException, DuplicateDefinitionException {
+    public void validate(Parameter parameter) throws IllegalVerbException, DuplicateDefinitionException {
         List<String> values = this.map.get(parameter);
         if (values != null && !values.isEmpty()) {
             if (parameter == Verb) {
@@ -78,11 +78,11 @@ public class OAIRequest {
         }
     }
 
-    public boolean has (Parameter parameter) {
+    public boolean has(Parameter parameter) {
         return get(parameter) != null;
     }
 
-    public String get (Parameter parameter) {
+    public String get(Parameter parameter) {
         List<String> values = this.map.get(parameter.toString());
         if (values == null || values.isEmpty()) return null;
         else {
@@ -100,13 +100,13 @@ public class OAIRequest {
         }
     }
 
-    public String getString (Parameter parameter) throws DuplicateDefinitionException, IllegalVerbException {
+    public String getString(Parameter parameter) throws DuplicateDefinitionException, IllegalVerbException {
         if (!has(parameter)) return null;
         validate(parameter);
         return get(parameter);
     }
 
-    public Type getVerb () throws DuplicateDefinitionException, IllegalVerbException {
+    public Type getVerb() throws DuplicateDefinitionException, IllegalVerbException {
         validate(Verb);
         String verb = get(Verb);
         if (verb == null)
@@ -119,11 +119,11 @@ public class OAIRequest {
     }
 
 
-    public Collection<String> getParameterNames () {
+    public Collection<String> getParameterNames() {
         return this.map.keySet();
     }
 
-    public OAICompiledRequest compile () throws IllegalVerbException, InvalidResumptionTokenException, UnknownParameterException, BadArgumentException, DuplicateDefinitionException {
+    public OAICompiledRequest compile() throws IllegalVerbException, InvalidResumptionTokenException, UnknownParameterException, BadArgumentException, DuplicateDefinitionException {
         return OAICompiledRequest.compile(this);
     }
 

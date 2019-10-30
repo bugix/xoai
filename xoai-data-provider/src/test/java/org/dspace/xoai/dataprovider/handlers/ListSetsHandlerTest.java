@@ -59,7 +59,7 @@ public class ListSetsHandlerTest extends AbstractHandlerTest {
     }
 
     @Test
-    public void showsVirtualSetsFirst () throws Exception {
+    public void showsVirtualSetsFirst() throws Exception {
         theSetRepository().withSet("set", "hello");
         theContext().withSet(set("virtual").withName("new").withCondition(alwaysFalseCondition()));
 
