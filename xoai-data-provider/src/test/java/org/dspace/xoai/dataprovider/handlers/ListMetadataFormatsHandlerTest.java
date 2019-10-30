@@ -23,7 +23,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ListMetadataFormatsHandlerTest extends AbstractHandlerTest {
     @Test(expected = InternalOAIException.class)
-    public void initializationErrorIfInvalidConfiguration() throws Exception {
+    public void initializationErrorIfInvalidConfiguration() {
         new ListMetadataFormatsHandler(aContext().withoutMetadataFormats(), theRepository());
     }
 

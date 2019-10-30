@@ -24,7 +24,7 @@ public class ResumptionTokenHelperTest {
     private static final boolean NOT_HAS_MORE_RESULTS = false;
 
     @Test
-    public void shouldReturnSecondPageIfResumptionTokenValueIsEmpty() throws Exception {
+    public void shouldReturnSecondPageIfResumptionTokenValueIsEmpty() {
         ResumptionToken.Value value = new ResumptionToken.Value();
         assertThat(value.isEmpty(), is(true));
 
@@ -38,7 +38,7 @@ public class ResumptionTokenHelperTest {
 
 
     @Test
-    public void onlyOffsetShouldChangeBetweenConsecutiveIterations() throws Exception {
+    public void onlyOffsetShouldChangeBetweenConsecutiveIterations() {
         ResumptionToken.Value value = new ResumptionToken.Value()
                 .withMetadataPrefix("test").withSetSpec("set");
         ResumptionTokenHelper underTest = new ResumptionTokenHelper(value, MAX_PER_PAGE)
@@ -54,7 +54,7 @@ public class ResumptionTokenHelperTest {
     }
 
     @Test
-    public void shouldReturnEmptyValueIfNoMoreResultsAndWithResumptionToken() throws Exception {
+    public void shouldReturnEmptyValueIfNoMoreResultsAndWithResumptionToken() {
         ResumptionToken.Value value = new ResumptionToken.Value().next(100);
         assertThat(value.isEmpty(), is(false));
 
@@ -67,7 +67,7 @@ public class ResumptionTokenHelperTest {
     }
 
     @Test
-    public void shouldReturnNullResumptionTokenIfResumptionTokenValueIsEmptyAndNoMoreResults() throws Exception {
+    public void shouldReturnNullResumptionTokenIfResumptionTokenValueIsEmptyAndNoMoreResults() {
         ResumptionToken.Value value = new ResumptionToken.Value();
         ResumptionTokenHelper underTest = new ResumptionTokenHelper(value, MAX_PER_PAGE)
                 .withTotalResults(TOTAL_RESULTS);

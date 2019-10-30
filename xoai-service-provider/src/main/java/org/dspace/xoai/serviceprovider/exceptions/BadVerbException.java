@@ -10,9 +10,6 @@ package org.dspace.xoai.serviceprovider.exceptions;
 
 public class BadVerbException extends HarvestException {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -7559609480305804607L;
 
 	public BadVerbException() {

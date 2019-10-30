@@ -15,8 +15,6 @@ public class ListIdentifiersParameters {
         return new ListIdentifiersParameters();
     }
 
-
-
     private String metadataPrefix;
     private String setSpec;
     private Date from;
@@ -65,7 +63,7 @@ public class ListIdentifiersParameters {
 
 	public void withGranularity(String granularity) {
 		this.granularity = granularity;
-		
+
 	}
 
 	public String getGranularity() {

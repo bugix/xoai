@@ -8,7 +8,6 @@
 
 package org.dspace.xoai.serviceprovider.exceptions;
 
-
 /**
  * @author Development @ Lyncode
  * @version 3.1.0

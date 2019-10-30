@@ -10,9 +10,6 @@ package org.dspace.xoai.serviceprovider.exceptions;
 
 public class BadArgumentException extends HarvestException {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3852801418680298861L;
 
 	public BadArgumentException() {

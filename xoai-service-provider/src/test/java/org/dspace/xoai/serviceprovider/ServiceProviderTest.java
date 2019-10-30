@@ -36,7 +36,7 @@ public class ServiceProviderTest extends AbstractServiceProviderTest {
     private final ServiceProvider underTest = new ServiceProvider(theContext());
 
     @Test
-    public void validIdentifyResponse() throws Exception {
+    public void validIdentifyResponse() {
         theDataRepositoryConfiguration()
                 .withRepositoryName("NAME")
                 .withDeleteMethod(PERSISTENT);

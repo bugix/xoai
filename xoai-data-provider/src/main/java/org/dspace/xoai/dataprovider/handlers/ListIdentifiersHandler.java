@@ -112,9 +112,7 @@ public class ListIdentifiersHandler extends VerbHandler<ListIdentifiers> {
 
 
     private Header createHeader(OAICompiledRequest parameters,
-                                    ItemIdentifier itemIdentifier) throws BadArgumentException,
-            OAIException,
-            NoMetadataFormatsException {
+                                    ItemIdentifier itemIdentifier) {
         MetadataFormat format = getContext().formatForPrefix(parameters
                 .getMetadataPrefix());
         if (!itemIdentifier.isDeleted() && !canDisseminate(itemIdentifier, format))

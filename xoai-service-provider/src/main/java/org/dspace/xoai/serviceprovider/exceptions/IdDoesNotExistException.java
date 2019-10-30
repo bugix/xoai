@@ -10,9 +10,6 @@ package org.dspace.xoai.serviceprovider.exceptions;
 
 public class IdDoesNotExistException extends HarvestException {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 8245395447554519167L;
 
 	public IdDoesNotExistException() {

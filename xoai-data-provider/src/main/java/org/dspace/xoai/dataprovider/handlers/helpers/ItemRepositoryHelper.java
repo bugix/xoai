@@ -45,7 +45,7 @@ public class ItemRepositoryHelper {
         return itemRepository.getItemIdentifiers(filters, offset, length, from);
     }
 
-    private List<ScopedFilter> getScopedFilters(Context context, String metadataPrefix) throws CannotDisseminateFormatException {
+    private List<ScopedFilter> getScopedFilters(Context context, String metadataPrefix) {
         List<ScopedFilter> filters = new ArrayList<>();
         if (context.hasCondition())
             filters.add(new ScopedFilter(context.getCondition(), Scope.Context));

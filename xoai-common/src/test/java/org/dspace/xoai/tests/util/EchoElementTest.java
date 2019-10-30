@@ -18,7 +18,7 @@ public class EchoElementTest {
      * are likely to be used later.
      */
     @Test
-    public void handleEarlyNamespaceDeclarations() throws XMLStreamException, XmlWriteException, IOException {
+    public void handleEarlyNamespaceDeclarations() throws XMLStreamException, XmlWriteException {
         String xml = "<?xml version='1.0' encoding='UTF-8'?>"
                 + "<oai_dc:dc xmlns:oai_dc=\"http://www.openarchives.org/OAI/2.0/oai_dc/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd\">\n"
                 + "\t<dc:title>Invasive Lithobates catesbeianus - American bullfrog occurrences in Flanders</dc:title>\n"
@@ -36,7 +36,7 @@ public class EchoElementTest {
      * a namespace declaration.
      */
     @Test
-    public void repeatingNamespaceDeclarations() throws XMLStreamException, XmlWriteException, IOException {
+    public void repeatingNamespaceDeclarations() throws XMLStreamException, XmlWriteException {
         String xml = "<?xml version='1.0' encoding='UTF-8'?>"
                 + "<oai_dc:dc xmlns:oai_dc=\"http://www.openarchives.org/OAI/2.0/oai_dc/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd\">\n"
                 + "\t<dc:title xmlns:dc=\"http://purl.org/dc/elements/1.1/\">Invasive Lithobates catesbeianus - American bullfrog occurrences in Flanders</dc:title>\n"

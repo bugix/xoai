@@ -14,9 +14,10 @@ package org.dspace.xoai.serviceprovider.exceptions;
  * @version 3.1.0
  */
 public class HarvestException extends Exception {
-    private static final long serialVersionUID = -1824340625967423555L;
-    private String url;
 
+    private static final long serialVersionUID = -1824340625967423555L;
+
+    private String url;
 
     public HarvestException() {
         url = "";

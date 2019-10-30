@@ -47,7 +47,7 @@ public class Error implements XmlWritable {
         }
     }
 
-    public static enum Code {
+    public enum Code {
 
         CANNOT_DISSEMINATE_FORMAT("cannotDisseminateFormat"),
         ID_DOES_NOT_EXIST("idDoesNotExist"),

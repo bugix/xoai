@@ -190,7 +190,7 @@ public class OAICompiledRequest {
         return verbType;
     }
 
-    private void validate() throws IllegalVerbException, BadArgumentException {
+    private void validate() throws BadArgumentException {
         if (this.hasResumptionToken()) {
             if (this.hasFrom() || this.hasSet() || this.hasUntil()
                     || this.hasMetadataPrefix())

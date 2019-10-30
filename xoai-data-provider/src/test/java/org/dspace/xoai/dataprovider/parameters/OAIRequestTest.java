@@ -20,7 +20,7 @@ public class OAIRequestTest {
     private OAIRequestParametersBuilder builder = new OAIRequestParametersBuilder();
 
     @Test
-    public void emptyParameterValueShouldReturnNullValue() throws Exception {
+    public void emptyParameterValueShouldReturnNullValue() {
         OAIRequest parameters = builder.with("from", "").build();
         assertThat(parameters.get(From), is(nullValue(String.class)));
     }

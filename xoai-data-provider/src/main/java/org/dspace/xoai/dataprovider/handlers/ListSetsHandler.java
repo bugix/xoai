@@ -35,7 +35,7 @@ public class ListSetsHandler extends VerbHandler<ListSets> {
 
 
     @Override
-    public ListSets handle(OAICompiledRequest parameters) throws OAIException, HandlerException {
+    public ListSets handle(OAICompiledRequest parameters) throws HandlerException {
         ListSets result = new ListSets();
         if (!getRepository().getSetRepository().supportSets())
             throw new DoesNotSupportSetsException();

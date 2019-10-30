@@ -18,7 +18,6 @@ public class TinyType<T> {
         this.value = val;
     }
 
-
     public T getValue() {
         return value;
     }

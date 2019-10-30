@@ -34,13 +34,14 @@ public abstract class AbstractMetadataSearcher<T> implements MetadataSearch<T> {
 	        if (elements != null && !elements.isEmpty())
 	            return elements.get(0);
 	        return null;
-	};
-	@Override
+	}
+
+    @Override
 	public List<T> findAll(String xoaiPath){
 		return index.get(xoaiPath);
-	};
+	}
 
-	@Override
+    @Override
 	public Map<String, List<T>> index() {
 		return index;
 	}

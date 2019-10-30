@@ -14,7 +14,7 @@ import org.dspace.xoai.model.oaipmh.Error;
 
 public class ErrorHandler {
 
-    public Error handle(HandlerException ex) throws OAIException {
+    public Error handle(HandlerException ex) {
         if (ex instanceof IllegalVerbException) {
             return new Error("Illegal verb")
                     .withCode(Error.Code.BAD_VERB);

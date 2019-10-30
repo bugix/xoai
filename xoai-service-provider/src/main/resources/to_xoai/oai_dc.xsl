@@ -34,7 +34,6 @@
 	                        	</field>
 	                        </xsl:when>
                         </xsl:choose>
-                        
                     </element>
                 </xsl:for-each>
             </element>

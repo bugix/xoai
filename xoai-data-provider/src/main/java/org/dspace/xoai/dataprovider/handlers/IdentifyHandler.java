@@ -68,7 +68,7 @@ public class IdentifyHandler extends VerbHandler<Identify> {
     }
 
     @Override
-    public Identify handle(OAICompiledRequest params) throws OAIException, HandlerException {
+    public Identify handle(OAICompiledRequest params) {
         Identify identify = new Identify();
         RepositoryConfiguration configuration = getRepository().getConfiguration();
         identify.withBaseURL(configuration.getBaseUrl());

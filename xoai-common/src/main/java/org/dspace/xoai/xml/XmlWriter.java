@@ -59,8 +59,6 @@ public class XmlWriter extends com.lyncode.xml.XmlWriter {
         this.writerContext = writerContext;
     }
 
-
-
     public void writeDate(Date date) throws XmlWriteException {
         try {
             this.writeCharacters(dateProvider.format(date, writerContext.granularity));

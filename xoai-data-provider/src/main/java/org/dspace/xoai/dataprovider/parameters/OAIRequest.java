@@ -30,7 +30,7 @@ import static org.dspace.xoai.model.oaipmh.Verb.Type.fromValue;
  * @version 3.1.0
  */
 public class OAIRequest {
-    public static enum Parameter {
+    public enum Parameter {
         From("from"),
         Until("until"),
         Identifier("identifier"),

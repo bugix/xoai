@@ -50,7 +50,6 @@ public class HttpOAIClient implements OAIClient {
 		httpclient = new DefaultHttpClient(createHttpParams());
 	}
 
-
 	/**
 	 * Creates a HttpOAIClient
 	 *
@@ -63,7 +62,6 @@ public class HttpOAIClient implements OAIClient {
 		this.baseUrlsHttpsExclusion = baseUrlsHttpsExclusion;
 		initHttpClient();
 	}
-
 
 	/**
 	 * Creates a HttpOAIClient
@@ -79,7 +77,6 @@ public class HttpOAIClient implements OAIClient {
 		this.baseUrlsHttpsExclusion = baseUrlsHttpsExclusion;
 		initHttpClient();
 	}
-
 
 	/**
 	 * Creates a HttpOAIClient
@@ -131,8 +128,7 @@ public class HttpOAIClient implements OAIClient {
 						new TrustStrategy() {
 							@Override
 							public boolean isTrusted(X509Certificate[] chain,
-									String authType)
-									throws CertificateException {
+									String authType) {
 								return true;
 							}
 

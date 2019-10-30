@@ -29,7 +29,7 @@ public class UTCDateProviderTest {
     DateProvider underTest = new UTCDateProvider();
 
     @Test
-    public void shouldUseUTCDateFormat() throws Exception {
+    public void shouldUseUTCDateFormat() {
         TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
         String result = underTest.format(DATE);
 

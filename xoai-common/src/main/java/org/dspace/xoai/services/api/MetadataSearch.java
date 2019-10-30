@@ -25,17 +25,8 @@ package org.dspace.xoai.services.api;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 
- *
- * @param <T> - The type of object that this searcher returns 
- */
 public interface MetadataSearch<T> {
     T findOne (String xoaiPath);
     List<T> findAll (String xoaiPath);
-	/**
-	 * 
-	 * @return - the entire metadata map 
-	 */
 	Map<String, List<T>> index();
 }
