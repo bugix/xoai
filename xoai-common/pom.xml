@@ -23,6 +23,7 @@
             <groupId>com.lyncode</groupId>
             <artifactId>xml-io</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.lyncode</groupId>
             <artifactId>test-support</artifactId>

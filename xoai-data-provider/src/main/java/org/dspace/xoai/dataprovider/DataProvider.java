@@ -9,7 +9,6 @@
 package org.dspace.xoai.dataprovider;
 
 import com.lyncode.builder.Builder;
-import org.apache.log4j.Logger;
 import org.dspace.xoai.dataprovider.exceptions.*;
 import org.dspace.xoai.dataprovider.handlers.*;
 import org.dspace.xoai.dataprovider.model.Context;
@@ -21,11 +20,13 @@ import org.dspace.xoai.model.oaipmh.OAIPMH;
 import org.dspace.xoai.model.oaipmh.Request;
 import org.dspace.xoai.services.api.DateProvider;
 import org.dspace.xoai.services.impl.UTCDateProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.dspace.xoai.dataprovider.parameters.OAIRequest.Parameter.*;
 
 public class DataProvider {
-    private static final Logger log = Logger.getLogger(DataProvider.class);
+    private static final Logger log = LoggerFactory.getLogger(DataProvider.class);
 
     public static DataProvider dataProvider (Context context, Repository repository) {
         return new DataProvider(context, repository);

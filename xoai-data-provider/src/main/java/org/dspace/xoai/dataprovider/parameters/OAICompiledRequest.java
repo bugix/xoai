@@ -9,8 +9,6 @@
 package org.dspace.xoai.dataprovider.parameters;
 
 import com.lyncode.builder.Builder;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.dspace.xoai.dataprovider.exceptions.BadArgumentException;
 import org.dspace.xoai.dataprovider.exceptions.DuplicateDefinitionException;
 import org.dspace.xoai.dataprovider.exceptions.IllegalVerbException;
@@ -39,16 +37,19 @@ import static org.hamcrest.CoreMatchers.*;
  * @version 3.1.0
  */
 public class OAICompiledRequest {
-    private static Logger log = LogManager.getLogger(OAICompiledRequest.class);
+
     public static OAICompiledRequest compile (OAIRequest request) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request);
     }
+
     public static OAICompiledRequest compile (OAIRequest request, ResumptionTokenFormat formatter) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request, formatter);
     }
+
     public static OAICompiledRequest compile (Builder<OAIRequest> request) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request.build());
     }
+
     public static OAICompiledRequest compile (Builder<OAIRequest> request, ResumptionTokenFormat formatter) throws BadArgumentException, InvalidResumptionTokenException, UnknownParameterException, IllegalVerbException, DuplicateDefinitionException {
         return new OAICompiledRequest(request.build(), formatter);
     }

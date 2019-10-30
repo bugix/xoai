@@ -8,18 +8,18 @@
 
 package org.dspace.xoai.dataprovider.handlers.helpers;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.dspace.xoai.dataprovider.handlers.results.ListSetsResult;
 import org.dspace.xoai.dataprovider.model.Context;
 import org.dspace.xoai.dataprovider.model.Set;
 import org.dspace.xoai.dataprovider.repository.SetRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SetRepositoryHelper {
-    private static final Logger log = LogManager.getLogger(SetRepositoryHelper.class);
+    private static final Logger log = LoggerFactory.getLogger(SetRepositoryHelper.class);
     private final SetRepository setRepository;
 
     public SetRepositoryHelper(SetRepository setRepository) {

@@ -9,8 +9,6 @@
 package org.dspace.xoai.dataprovider.handlers;
 
 import com.lyncode.xml.exceptions.XmlWriteException;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.dspace.xoai.dataprovider.exceptions.InternalOAIException;
 import org.dspace.xoai.dataprovider.model.Context;
 import org.dspace.xoai.dataprovider.parameters.OAICompiledRequest;
@@ -21,6 +19,8 @@ import org.dspace.xoai.model.oaipmh.Description;
 import org.dspace.xoai.model.oaipmh.Identify;
 import org.dspace.xoai.xml.XmlWritable;
 import org.dspace.xoai.xml.XmlWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.xml.stream.XMLStreamException;
 import java.net.MalformedURLException;
@@ -29,7 +29,7 @@ import java.util.List;
 
 
 public class IdentifyHandler extends VerbHandler<Identify> {
-    private static final Logger log = LogManager.getLogger(IdentifyHandler.class);
+    private static final Logger log = LoggerFactory.getLogger(IdentifyHandler.class);
 
     private static final String PROTOCOL_VERSION = "2.0";
     private static final String XOAI_DESC = "XOAI: OAI-PMH Java Toolkit";
