@@ -19,7 +19,7 @@ import static java.util.Arrays.asList;
 
 public class RepositoryConfiguration {
     private String repositoryName;
-    private List<String> adminEmails = new ArrayList<>();
+    private final List<String> adminEmails = new ArrayList<>();
     private String baseUrl;
     private Date earliestDate;
     private int maxListIdentifiers;

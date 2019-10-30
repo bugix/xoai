@@ -28,7 +28,7 @@ public class XSLPipelineTest {
     private static final TransformerFactory tFactory = TransformerFactory.newInstance();
     private static final String TEST_XML = "<test />";
 
-    private ByteArrayInputStream input = new ByteArrayInputStream(TEST_XML.getBytes());
+    private final ByteArrayInputStream input = new ByteArrayInputStream(TEST_XML.getBytes());
 
     @Test
     public void shouldGiveTheSameIfNoTransformationIsApplied() throws Exception {

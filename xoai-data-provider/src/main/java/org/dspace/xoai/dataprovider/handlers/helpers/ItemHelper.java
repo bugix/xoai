@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemHelper extends ItemIdentifyHelper {
-    private Item item;
+    private final Item item;
 
     public ItemHelper(Item item) {
         super(item);

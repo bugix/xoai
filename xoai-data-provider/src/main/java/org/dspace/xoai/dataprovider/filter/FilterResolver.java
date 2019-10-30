@@ -11,5 +11,5 @@ package org.dspace.xoai.dataprovider.filter;
 import org.dspace.xoai.dataprovider.model.conditions.Condition;
 
 public abstract class FilterResolver {
-    public abstract Filter getFilter (Condition condition);
+    public abstract Filter getFilter(Condition condition);
 }

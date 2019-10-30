@@ -11,7 +11,6 @@ package org.dspace.xoai.dataprovider.handlers;
 import org.dspace.xoai.dataprovider.exceptions.DoesNotSupportSetsException;
 import org.dspace.xoai.dataprovider.exceptions.HandlerException;
 import org.dspace.xoai.dataprovider.exceptions.NoMatchesException;
-import org.dspace.xoai.dataprovider.exceptions.OAIException;
 import org.dspace.xoai.dataprovider.handlers.helpers.ResumptionTokenHelper;
 import org.dspace.xoai.dataprovider.handlers.helpers.SetRepositoryHelper;
 import org.dspace.xoai.dataprovider.handlers.results.ListSetsResult;

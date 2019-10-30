@@ -21,10 +21,10 @@ import org.dspace.xoai.serviceprovider.parameters.ListRecordsParameters;
 import java.util.Iterator;
 
 public class ServiceProvider {
-    private Context context;
-    private ListMetadataFormatsHandler listMetadataFormatsHandler;
-    private IdentifyHandler identifyHandler;
-    private GetRecordHandler getRecordHandler;
+    private final Context context;
+    private final ListMetadataFormatsHandler listMetadataFormatsHandler;
+    private final IdentifyHandler identifyHandler;
+    private final GetRecordHandler getRecordHandler;
 
     public ServiceProvider (Context context) {
         this.context = context;

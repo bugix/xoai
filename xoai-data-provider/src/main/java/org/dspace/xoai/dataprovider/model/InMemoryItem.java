@@ -25,7 +25,7 @@ public class InMemoryItem implements Item {
         return new InMemoryItem();
     }
 
-    private Map<String, Object> values = new HashMap<>();
+    private final Map<String, Object> values = new HashMap<>();
 
     public static InMemoryItem randomItem() {
         return new InMemoryItem()

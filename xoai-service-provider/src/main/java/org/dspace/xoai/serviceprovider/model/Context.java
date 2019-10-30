@@ -22,7 +22,7 @@ public class Context {
     private static final TransformerFactory factory = TransformerFactory.newInstance();
 
     private Transformer transformer;
-    private Map<String, Transformer> metadataTransformers = new HashMap<>();
+    private final Map<String, Transformer> metadataTransformers = new HashMap<>();
     private String baseUrl;
     private Granularity granularity;
     private OAIClient client;
@@ -95,7 +95,7 @@ public class Context {
     public enum KnownTransformer {
         OAI_DC("to_xoai/oai_dc.xsl");
 
-        private String location;
+        private final String location;
 
         KnownTransformer(String location) {
             this.location = location;

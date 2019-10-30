@@ -39,7 +39,7 @@ public class OAIRequest {
         Set("set"),
         Verb("verb");
 
-        private String representation;
+        private final String representation;
 
         Parameter (String rep) {
             this.representation = rep;
@@ -58,8 +58,8 @@ public class OAIRequest {
         }
     }
 
-    private Map<String, List<String>> map;
-    private DateProvider dateProvider = new UTCDateProvider();
+    private final Map<String, List<String>> map;
+    private final DateProvider dateProvider = new UTCDateProvider();
 
     public OAIRequest(Map<String, List<String>> map) {
         this.map = map;

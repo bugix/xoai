@@ -56,9 +56,9 @@ public class Element implements XmlWritable {
         return element;
     }
 
-    protected List<Field> fields = new ArrayList<>();
+    protected final List<Field> fields = new ArrayList<>();
     protected String name;
-    protected List<Element> elements = new ArrayList<>();
+    protected final List<Element> elements = new ArrayList<>();
 
     public Element(String name) {
         this.name = name;

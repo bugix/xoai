@@ -27,7 +27,7 @@ public class Record implements XmlWritable {
 
     protected Header header;
     protected Metadata metadata;
-    protected List<About> abouts = new ArrayList<>();
+    protected final List<About> abouts = new ArrayList<>();
 
     public Header getHeader() {
         return header;

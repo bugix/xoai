@@ -62,7 +62,7 @@ public class XOAIMetadata implements XmlWritable {
     public static final String NAMESPACE_URI = "http://www.lyncode.com/xoai";
     public static final String SCHEMA_LOCATION = "http://www.lyncode.com/xsd/xoai.xsd";
 
-    protected List<Element> elements = new ArrayList<>();
+    protected final List<Element> elements = new ArrayList<>();
 
     public List<Element> getElements() {
         return this.elements;

@@ -35,8 +35,8 @@ public class XmlWriter extends com.lyncode.xml.XmlWriter {
     }
 
     public static class WriterContext {
-        private Granularity granularity;
-        private ResumptionTokenFormat formatter;
+        private final Granularity granularity;
+        private final ResumptionTokenFormat formatter;
 
         public WriterContext(Granularity granularity, ResumptionTokenFormat formatter) {
             this.granularity = granularity;

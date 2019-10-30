@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ListIdentifiers implements Verb {
 
-    protected List<Header> headers = new ArrayList<>();
+    protected final List<Header> headers = new ArrayList<>();
     protected ResumptionToken resumptionToken;
 
     public List<Header> getHeaders() {

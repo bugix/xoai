@@ -25,7 +25,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DataProviderTest extends AbstractHandlerTest {
     private static final String OAI_NAMESPACE = "http://www.openarchives.org/OAI/2.0/";
-    private DataProvider dataProvider = new DataProvider(aContext(), theRepository());
+    private final DataProvider dataProvider = new DataProvider(aContext(), theRepository());
 
     @Test
     public void missingMetadataFormat() throws Exception {

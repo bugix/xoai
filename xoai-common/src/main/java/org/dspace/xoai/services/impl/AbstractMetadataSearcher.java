@@ -20,7 +20,7 @@ import java.util.Map;
 public abstract class AbstractMetadataSearcher<T> implements MetadataSearch<T> {
 
 	protected static final String DEFAULT_FIELD = "value";
-	protected Map<String, List<T>> index = new HashMap<>();
+	protected final Map<String, List<T>> index = new HashMap<>();
 
 
     public AbstractMetadataSearcher (XOAIMetadata metadata) {

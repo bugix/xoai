@@ -9,7 +9,6 @@
 package org.dspace.xoai.dataprovider.repository;
 
 import org.dspace.xoai.dataprovider.exceptions.IdDoesNotExistException;
-import org.dspace.xoai.dataprovider.exceptions.OAIException;
 import org.dspace.xoai.dataprovider.filter.ScopedFilter;
 import org.dspace.xoai.dataprovider.handlers.results.ListItemIdentifiersResult;
 import org.dspace.xoai.dataprovider.handlers.results.ListItemsResults;
@@ -24,7 +23,7 @@ import static java.lang.Math.min;
 import static java.util.Arrays.asList;
 
 public class InMemoryItemRepository implements ItemRepository {
-    private List<InMemoryItem> list = new ArrayList<>();
+    private final List<InMemoryItem> list = new ArrayList<>();
 
     public InMemoryItemRepository withNoItems() {
         return this;

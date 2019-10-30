@@ -35,9 +35,9 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.AllOf.allOf;
 
 public class ListIdentifierHandler implements Source<Header> {
-    private Context context;
-    private ListIdentifiersParameters parameters;
-    private OAIClient client;
+    private final Context context;
+    private final ListIdentifiersParameters parameters;
+    private final OAIClient client;
     private String resumptionToken;
     private boolean ended = false;
 

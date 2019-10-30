@@ -12,9 +12,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class ProcessingQueue<E> {
-    private Queue<E> _queue;
+    private final Queue<E> _queue;
     private Boolean _finished;
-    private Object hold;
+    private final Object hold;
 
     public ProcessingQueue() {
         _queue = new LinkedList<>();

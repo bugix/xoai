@@ -22,7 +22,7 @@ import java.util.List;
 import static org.dspace.xoai.util.URLEncoder.encode;
 
 public class Parameters {
-    private static DateProvider formatter = new UTCDateProvider();
+    private static final DateProvider formatter = new UTCDateProvider();
 
     public static Parameters parameters () {
         return new Parameters();

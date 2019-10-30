@@ -19,12 +19,12 @@ public class Identify implements Verb {
     protected String repositoryName;
     protected String baseURL;
     protected String protocolVersion = "1.0";
-    protected List<String> adminEmails = new ArrayList<>();
+    protected final List<String> adminEmails = new ArrayList<>();
     protected Date earliestDatestamp;
     protected DeletedRecord deletedRecord = DeletedRecord.NO;
     protected Granularity granularity = Granularity.Second;
-    protected List<String> compressions = new ArrayList<>();
-    protected List<Description> descriptions = new ArrayList<>();
+    protected final List<String> compressions = new ArrayList<>();
+    protected final List<Description> descriptions = new ArrayList<>();
 
     public String getRepositoryName() {
         return repositoryName;

@@ -22,7 +22,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ListIdentifiersHandlerTest extends AbstractHandlerTest {
-    private ListIdentifiersHandler underTest = new ListIdentifiersHandler(aContext(), theRepository());
+    private final ListIdentifiersHandler underTest = new ListIdentifiersHandler(aContext(), theRepository());
 
     @Test(expected = BadArgumentException.class)
     public void metadataPrefixIsMandatory () throws Exception {

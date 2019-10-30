@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SetRepositoryHelper {
-    private static Logger log = LogManager.getLogger(SetRepositoryHelper.class);
-    private SetRepository setRepository;
+    private static final Logger log = LogManager.getLogger(SetRepositoryHelper.class);
+    private final SetRepository setRepository;
 
     public SetRepositoryHelper(SetRepository setRepository) {
         super();

@@ -26,7 +26,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class UTCDateProviderTest {
     private static final Date DATE = new Date();
     private static final String SECOND_FORMAT = "([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})Z";
-    DateProvider underTest = new UTCDateProvider();
+    final DateProvider underTest = new UTCDateProvider();
 
     @Test
     public void shouldUseUTCDateFormat() {

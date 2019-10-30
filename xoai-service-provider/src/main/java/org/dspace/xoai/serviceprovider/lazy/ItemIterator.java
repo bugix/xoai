@@ -13,8 +13,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ItemIterator<T> implements Iterator<T> {
-    private List<T> items = new ArrayList<>();
-    private Source<T> source;
+    private final List<T> items = new ArrayList<>();
+    private final Source<T> source;
     private int position = 0;
 
     public ItemIterator(Source<T> source) {

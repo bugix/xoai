@@ -29,7 +29,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class RecordParser {
     private final Context context;
-    private String metadataPrefix;
+    private final String metadataPrefix;
 
     public RecordParser(Context context, String metadataPrefix) {
         this.context = context;

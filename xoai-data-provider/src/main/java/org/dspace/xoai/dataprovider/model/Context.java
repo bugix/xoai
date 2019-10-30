@@ -22,8 +22,8 @@ public class Context {
     }
 
     private Transformer metadataTransformer;
-    private List<MetadataFormat> metadataFormats = new ArrayList<>();
-    private List<Set> sets = new ArrayList<>();
+    private final List<MetadataFormat> metadataFormats = new ArrayList<>();
+    private final List<Set> sets = new ArrayList<>();
     private Condition condition;
 
     public List<Set> getSets() {

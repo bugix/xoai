@@ -36,7 +36,7 @@ import java.util.List;
 
 
 public class ListRecordsHandler extends VerbHandler<ListRecords> {
-    private static Logger log = Logger.getLogger(ListRecordsHandler.class);
+    private static final Logger log = Logger.getLogger(ListRecordsHandler.class);
     private final ItemRepositoryHelper itemRepositoryHelper;
     private final SetRepositoryHelper setRepositoryHelper;
 

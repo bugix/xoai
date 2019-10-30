@@ -34,12 +34,11 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
-import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.List;
 
 public class HttpOAIClient implements OAIClient {
-	private String baseUrl;
+	private final String baseUrl;
 	private HttpClient httpclient;
 	private int timeout = 60000;
 	private String userAgent;

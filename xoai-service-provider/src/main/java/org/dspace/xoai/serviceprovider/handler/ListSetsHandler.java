@@ -34,8 +34,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.AllOf.allOf;
 
 public class ListSetsHandler implements Source<Set> {
-    private Context context;
-    private OAIClient client;
+    private final Context context;
+    private final OAIClient client;
     private String resumptionToken;
     private boolean ended = false;
 

@@ -35,9 +35,9 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.AllOf.allOf;
 
 public class ListRecordHandler implements Source<Record> {
-    private Context context;
-    private ListRecordsParameters parameters;
-    private OAIClient client;
+    private final Context context;
+    private final ListRecordsParameters parameters;
+    private final OAIClient client;
     private String resumptionToken;
     private boolean ended = false;
 

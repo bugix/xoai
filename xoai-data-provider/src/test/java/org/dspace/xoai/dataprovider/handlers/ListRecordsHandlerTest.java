@@ -22,7 +22,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ListRecordsHandlerTest extends AbstractHandlerTest {
-    private ListRecordsHandler underTest = new ListRecordsHandler(aContext(), theRepository());
+    private final ListRecordsHandler underTest = new ListRecordsHandler(aContext(), theRepository());
 
     @Test(expected = BadArgumentException.class)
     public void missingMetadataFormat() throws Exception {

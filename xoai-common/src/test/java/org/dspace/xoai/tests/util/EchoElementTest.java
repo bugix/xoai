@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 

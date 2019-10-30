@@ -17,7 +17,7 @@ import java.text.ParseException;
 import java.util.Date;
 
 public class IslandParsers {
-    private static DateProvider dateProvider = new UTCDateProvider();
+    private static final DateProvider dateProvider = new UTCDateProvider();
 
     public static XmlReader.IslandParser<Date> dateParser() {
         return new XmlReader.IslandParser<>() {

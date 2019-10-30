@@ -29,8 +29,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 public class GetRecordParser {
 
     private final XmlReader reader;
-    private Context context;
-    private String metadataPrefix;
+    private final Context context;
+    private final String metadataPrefix;
 
     public GetRecordParser(InputStream stream, Context context, String metadataPrefix) {
         this.context = context;

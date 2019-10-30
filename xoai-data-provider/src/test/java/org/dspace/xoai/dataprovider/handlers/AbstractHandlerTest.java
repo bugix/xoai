@@ -40,11 +40,11 @@ import static org.dspace.xoai.dataprovider.model.MetadataFormat.identity;
 public abstract class AbstractHandlerTest {
 
     protected static final String EXISTING_METADATA_FORMAT = "xoai";
-    private Context context = new Context().withMetadataFormat(EXISTING_METADATA_FORMAT, identity());
-    private InMemorySetRepository setRepository = new InMemorySetRepository();
-    private InMemoryItemRepository itemRepository = new InMemoryItemRepository();
-    private RepositoryConfiguration repositoryConfiguration = new RepositoryConfiguration().withDefaults();
-    private Repository repository = new Repository()
+    private final Context context = new Context().withMetadataFormat(EXISTING_METADATA_FORMAT, identity());
+    private final InMemorySetRepository setRepository = new InMemorySetRepository();
+    private final InMemoryItemRepository itemRepository = new InMemoryItemRepository();
+    private final RepositoryConfiguration repositoryConfiguration = new RepositoryConfiguration().withDefaults();
+    private final Repository repository = new Repository()
             .withSetRepository(setRepository)
             .withItemRepository(itemRepository)
             .withResumptionTokenFormatter(new SimpleResumptionTokenFormat())

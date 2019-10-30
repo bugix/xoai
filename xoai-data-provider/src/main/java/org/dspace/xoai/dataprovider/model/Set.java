@@ -25,7 +25,7 @@ public class Set {
 
     private final String spec;
     private String name;
-    private List<XOAIMetadata> descriptions = new ArrayList<>();
+    private final List<XOAIMetadata> descriptions = new ArrayList<>();
     private Condition condition;
 
     public Set(String spec) {

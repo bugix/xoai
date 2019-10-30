@@ -25,7 +25,7 @@ import static java.util.Arrays.asList;
 
 public class OAIRequestParametersBuilder implements Builder<OAIRequest> {
     private final UTCDateProvider utcDateProvider = new UTCDateProvider();
-    private Map<String, List<String>> params = new HashMap<>();
+    private final Map<String, List<String>> params = new HashMap<>();
 
     public OAIRequestParametersBuilder with(String name, String... values) {
         if (values == null || (values.length > 0 && values[0] == null))

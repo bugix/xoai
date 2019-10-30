@@ -18,7 +18,7 @@ import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
 public class InMemorySetRepository implements SetRepository {
     private boolean supportSets = true;
-    private List<Set> sets = new ArrayList<>();
+    private final List<Set> sets = new ArrayList<>();
 
     public InMemorySetRepository doesNotSupportSets() {
         this.supportSets = false;

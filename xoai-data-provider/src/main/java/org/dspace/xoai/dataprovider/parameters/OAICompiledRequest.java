@@ -53,7 +53,7 @@ public class OAICompiledRequest {
         return new OAICompiledRequest(request.build(), formatter);
     }
 
-    private static DateProvider dateProvider = new UTCDateProvider();
+    private static final DateProvider dateProvider = new UTCDateProvider();
 
     private Type verbType;
     private ResumptionToken.Value resumptionToken = null;

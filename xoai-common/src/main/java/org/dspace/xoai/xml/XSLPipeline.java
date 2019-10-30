@@ -22,8 +22,8 @@ import java.util.List;
 public class XSLPipeline {
     private InputStream inputStream;
     private ByteArrayOutputStream outputStream;
-    private List<Transformer> transformers = new ArrayList<>();
-    private boolean omitXMLDeclaration;
+    private final List<Transformer> transformers = new ArrayList<>();
+    private final boolean omitXMLDeclaration;
 
     public XSLPipeline(InputStream inputStream, boolean omitXMLDeclaration) {
         this.inputStream = inputStream;

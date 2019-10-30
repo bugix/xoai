@@ -25,14 +25,14 @@ import org.dspace.xoai.services.impl.UTCDateProvider;
 import static org.dspace.xoai.dataprovider.parameters.OAIRequest.Parameter.*;
 
 public class DataProvider {
-    private static Logger log = Logger.getLogger(DataProvider.class);
+    private static final Logger log = Logger.getLogger(DataProvider.class);
 
     public static DataProvider dataProvider (Context context, Repository repository) {
         return new DataProvider(context, repository);
     }
 
-    private Repository repository;
-    private DateProvider dateProvider;
+    private final Repository repository;
+    private final DateProvider dateProvider;
 
     private final IdentifyHandler identifyHandler;
     private final GetRecordHandler getRecordHandler;

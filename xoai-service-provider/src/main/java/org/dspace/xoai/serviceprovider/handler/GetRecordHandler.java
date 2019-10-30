@@ -28,7 +28,7 @@ import static org.dspace.xoai.serviceprovider.parameters.Parameters.parameters;
 public class GetRecordHandler {
 
     private final OAIClient client;
-    private Context context;
+    private final Context context;
 
     public GetRecordHandler(Context context) {
         this.context = context;

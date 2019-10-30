@@ -28,7 +28,7 @@ import static org.dspace.xoai.model.oaipmh.Verb.Type.ListMetadataFormats;
 import static org.dspace.xoai.serviceprovider.parameters.Parameters.parameters;
 
 public class ListMetadataFormatsHandler {
-    private OAIClient client;
+    private final OAIClient client;
 
     public ListMetadataFormatsHandler(Context context) {
         this.client = context.getClient();

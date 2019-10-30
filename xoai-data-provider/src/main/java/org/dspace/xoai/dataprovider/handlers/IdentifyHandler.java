@@ -11,9 +11,7 @@ package org.dspace.xoai.dataprovider.handlers;
 import com.lyncode.xml.exceptions.XmlWriteException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.dspace.xoai.dataprovider.exceptions.HandlerException;
 import org.dspace.xoai.dataprovider.exceptions.InternalOAIException;
-import org.dspace.xoai.dataprovider.exceptions.OAIException;
 import org.dspace.xoai.dataprovider.model.Context;
 import org.dspace.xoai.dataprovider.parameters.OAICompiledRequest;
 import org.dspace.xoai.dataprovider.repository.Repository;
@@ -31,7 +29,7 @@ import java.util.List;
 
 
 public class IdentifyHandler extends VerbHandler<Identify> {
-    private static Logger log = LogManager.getLogger(IdentifyHandler.class);
+    private static final Logger log = LogManager.getLogger(IdentifyHandler.class);
 
     private static final String PROTOCOL_VERSION = "2.0";
     private static final String XOAI_DESC = "XOAI: OAI-PMH Java Toolkit";
