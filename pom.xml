@@ -18,7 +18,7 @@
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
-        <version>7</version>
+        <version>9</version>
     </parent>
 
     <groupId>org.dspace</groupId>
@@ -31,7 +31,7 @@
     </organization>
 
     <name>XOAI : OAI-PMH Java Toolkit</name>
-    <url>https://github.com/DSpace/xoai</url>
+    <url>https://github.com/bugix/xoai</url>
 
     <properties>
         <mockito.version>1.9.5</mockito.version>
@@ -56,9 +56,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:DSpace/xoai.git</connection>
-        <developerConnection>scm:git:git@github.com:DSpace/xoai.git</developerConnection>
-        <url>git@github.com:DSpace/xoai.git</url>
+        <connection>scm:git:git@github.com:bugix/xoai.git</connection>
+        <developerConnection>scm:git:git@github.com:bugix/xoai.git</developerConnection>
+        <url>git@github.com:bugix/xoai.git</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -69,22 +69,12 @@
         release manager.
     -->
     <distributionManagement>
-        <!-- further distribution management is found upstream in the sonatype parent -->
+        <repository>
+            <id>github</id>
+            <name>GitHub bugix Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/bugix/xoai</url>
+        </repository>
     </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>sonatype-releases</id>
-            <name>Sonatype Releases Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/releases/</url>
-        </repository>
-        <!--Nor sonatype nor maven central appear to still contain org.restlet.jee:org.restlet.ext.servlet:jar:2.1.1 any more. No problem if it is in your local repo. Build fail if it isn't-->
-        <repository>
-            <id>restlet</id>
-            <name>restlet</name>
-            <url>http://maven.restlet.org</url>
-        </repository>
-    </repositories>
 
     <build>
         <pluginManagement>
